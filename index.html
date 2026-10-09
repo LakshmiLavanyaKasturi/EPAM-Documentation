@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title data-i18n="0">IPAP Pilot Assessment and Rollout Recommendation</title>
+<style>
+body{margin:0;background:#fff;color:#111;font:16px/1.6 -apple-system,"Segoe UI",Calibri,Arial,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:26px;margin:48px 0 12px;padding-top:16px;border-top:1px solid #ccc}
+header h1{border:0;margin:0 0 6px;padding:0;font-size:34px}
+header .sub{margin:0 0 24px;color:#444}
+h2{font-size:20px;margin:32px 0 8px}
+h3{font-size:17px;margin:22px 0 6px}
+p{margin:0 0 12px}
+ul,ol{margin:0 0 14px;padding-left:1.5em}
+li{margin:3px 0}
+li.sub{margin-left:1.5em;list-style-type:"– "}
+nav.toc{border:1px solid #ccc;padding:12px 18px;margin:0 0 24px}
+nav.toc p{margin:0 0 6px;font-weight:600}
+nav.toc a{display:block;color:#111;text-decoration:none;padding:2px 0}
+nav.toc a.l2{padding-left:18px;font-size:15px}
+nav.toc a:hover{text-decoration:underline}
+.table-wrap{overflow-x:auto;margin:8px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{border:1px solid #000;padding:6px 9px;text-align:left;vertical-align:top}
+th{font-weight:600}
+td p{margin:0}
+figure{margin:12px 0 4px;text-align:center}
+figure img{max-width:100%;height:auto}
+.caption{text-align:center;font-size:14px;color:#444}
+.downloads{margin:0 0 24px;font-size:15px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+details.textdesc{border:1px solid #ccc;padding:8px 12px;margin:4px 0 18px;font-size:15px}
+details.textdesc summary{cursor:pointer;font-weight:600}
+details.textdesc p{margin:8px 0 0}
+.caption{font-style:italic}
+.downloads a{color:#111}
+@media print{nav.toc,.downloads{display:none} h1{break-before:page} header h1{break-before:auto}}
+.langbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end;margin:0 0 20px;font-size:14px}
+.langbar select{font:inherit;padding:4px 8px;border:1px solid #000;background:#fff;color:#111}
+.langnote{border:1px solid #ccc;padding:8px 12px;font-size:14px;margin:0 0 20px}
+@media print{.langbar{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="langbar"><label for="lang-select">Language · Idioma · भाषा · Langue · 语言</label>
+<select id="lang-select">
+<option value="en" lang="en">English</option>
+<option value="es" lang="es">Español</option>
+<option value="hi" lang="hi">हिन्दी</option>
+<option value="fr" lang="fr">Français</option>
+<option value="zh" lang="zh-Hans">简体中文</option>
+</select></div>
+<p class="langnote" id="langnote" hidden></p>
+<header>
+<h1 data-i18n="0">IPAP Pilot Assessment and Rollout Recommendation</h1>
+<p class="sub" data-i18n="1">Workforce Experience Challenge  |  Technical writer, data center operations and engineering</p>
+</header>
+<p class="downloads"><a data-i18n="2" download="" href="EPAM - Workforce Experience Challenge - Lavanya.docx">Download the Word version</a></p>
+<nav class="toc"><p data-i18n="3">Contents</p><a class="l1" data-i18n="4" href="#introduction">Introduction</a>
+<a class="l1" data-i18n="5" href="#abbreviations">Abbreviations</a>
+<a class="l1" data-i18n="6" href="#part-1-conflicting-information-analysis">Part 1: Conflicting information analysis</a>
+<a class="l2" data-i18n="7" href="#information-confidence-matrix-deliverable-a">Information confidence matrix (Deliverable A)</a>
+<a class="l2" data-i18n="8" href="#publication-validation-questions-deliverable-b">Publication validation questions (Deliverable B)</a>
+<a class="l1" data-i18n="9" href="#part-2-sme-analysis-deliverable-c">Part 2: SME analysis (Deliverable C)</a>
+<a class="l1" data-i18n="10" href="#part-3-information-architecture-deliverable-d">Part 3: Information architecture (Deliverable D)</a>
+<a class="l2" data-i18n="11" href="#ipap-knowledge-center">IPAP knowledge center</a>
+<a class="l2" data-i18n="12" href="#information-architecture-overview">1. Information architecture overview</a>
+<a class="l2" data-i18n="13" href="#intended-users">2. Intended users</a>
+<a class="l2" data-i18n="14" href="#content-ownership">3. Content ownership</a>
+<a class="l2" data-i18n="15" href="#review-and-governance">4. Review and governance</a>
+<a class="l2" data-i18n="16" href="#maintenance-strategy">5. Maintenance strategy</a>
+<a class="l1" data-i18n="17" href="#part-4-metrics">Part 4: Metrics</a>
+<a class="l2" data-i18n="18" href="#executive-narrative-deliverable-e">Executive narrative (Deliverable E)</a>
+<a class="l2" data-i18n="19" href="#operations-narrative-deliverable-f">Operations narrative (Deliverable F)</a>
+<a class="l2" data-i18n="20" href="#dashboard-recommendation-deliverable-g">Dashboard recommendation (Deliverable G)</a>
+<a class="l1" data-i18n="21" href="#part-5-leadership-recommendation-deliverable-h">Part 5: Leadership recommendation (Deliverable H)</a>
+<a class="l1" data-i18n="22" href="#part-6-ai-usage-record-deliverable-i">Part 6: AI usage record (Deliverable I)</a></nav>
+<main>
+<h2 data-i18n="4" id="introduction">Introduction</h2>
+<p data-i18n="23">This document presents my assessment of the Infrastructure
+Provisioning Automation Program (IPAP) based on the information provided
+in the challenge. The goal is to evaluate conflicting and incomplete
+information, identify what can be trusted or require further validation,
+and organize the findings into clear, usable documentation. It also
+covers information architecture, content governance, audience-specific
+communication, key metrics, and a final recommendation on the program’s
+readiness for broader rollout.</p>
+<h2 data-i18n="5" id="abbreviations">Abbreviations</h2>
+<p data-i18n="24">The following abbreviations are used throughout this document to
+refer to key programs, roles, regions, and technologies.</p>
+<p class="sr-only" data-i18n="25" id="tdesc-1">Table: Abbreviations used in this document. Two columns: abbreviation and expanded form. Twelve rows, from IPAP (Infrastructure Provisioning Automation Program) to AI (artificial intelligence).</p><div class="table-wrap"><table aria-describedby="tdesc-1">
+<thead>
+<tr class="header">
+<th data-i18n="26"><strong>Abbreviation</strong></th>
+<th data-i18n="27"><strong>Expanded form</strong></th>
+</tr>
+</thead>
+<tbody><tr class="odd">
+<td data-i18n="28">IPAP</td>
+<td data-i18n="29">Infrastructure Provisioning Automation Program</td>
+</tr><tr class="header">
+<td data-i18n="30">SME</td>
+<td data-i18n="31">Subject matter expert</td>
+</tr><tr class="odd">
+<td data-i18n="32">NA</td>
+<td data-i18n="33">North America</td>
+</tr><tr class="header">
+<td data-i18n="34">EMEA</td>
+<td data-i18n="35">Europe, Middle East, and Africa</td>
+</tr><tr class="odd">
+<td data-i18n="36">APAC</td>
+<td data-i18n="37">Asia-Pacific</td>
+</tr><tr class="header">
+<td data-i18n="38">OS</td>
+<td data-i18n="39">Operating system</td>
+</tr><tr class="odd">
+<td data-i18n="40">RBAC</td>
+<td data-i18n="41">Role-based access control</td>
+</tr><tr class="header">
+<td data-i18n="42">QA</td>
+<td data-i18n="43">Quality assurance</td>
+</tr><tr class="odd">
+<td data-i18n="44">SRE</td>
+<td data-i18n="45">Site reliability engineer</td>
+</tr><tr class="header">
+<td>P90</td>
+<td data-i18n="46">90th percentile</td>
+</tr><tr class="odd">
+<td data-i18n="47">FAQ</td>
+<td data-i18n="48">Frequently asked question</td>
+</tr><tr class="header">
+<td data-i18n="49">AI</td>
+<td data-i18n="50">Artificial intelligence</td>
+</tr>
+</tbody>
+</table></div>
+<h2 data-i18n="6" id="part-1-conflicting-information-analysis">Part 1: Conflicting
+information analysis</h2>
+<h2 data-i18n="7" id="information-confidence-matrix-deliverable-a">Information
+confidence matrix (Deliverable A)</h2>
+<p data-i18n="51">Each statement is rated using the following confidence levels:</p>
+<ul>
+<li data-i18n="52">
+<strong>High:</strong> Confirmed by two or more sources, or by the
+metrics data.
+</li>
+<li data-i18n="53">
+<strong>Medium:</strong> Comes from one reliable source, but is
+approximate, undated, or not fully defined.
+</li>
+<li data-i18n="54">
+<strong>Low:</strong> Contradicted by another source, or a limited
+result presented as a general one.
+</li>
+</ul>
+<p class="sr-only" data-i18n="55" id="tdesc-2">Table: Information confidence matrix. Seven statements from Sources A, B, and C, each with a confidence level, whether to publish it, and whether validation is required. The three Source A statements are rated Low and should not be published.</p><div class="table-wrap"><table aria-describedby="tdesc-2">
+<thead>
+<tr class="header">
+<th data-i18n="56"><strong>Statement</strong></th>
+<th data-i18n="57"><strong>Source</strong></th>
+<th data-i18n="58"><strong>Confidence level</strong></th>
+<th data-i18n="59"><strong>Publish?</strong></th>
+<th data-i18n="60"><strong>Requires validation?</strong></th>
+</tr>
+</thead>
+<tbody><tr class="odd">
+<td data-i18n="61">IPAP global rollout successfully completed.</td>
+<td data-i18n="62">Source A</td>
+<td data-i18n="63">Low</td>
+<td data-i18n="64">No</td>
+<td data-i18n="65">Yes. Directly contradicted by Source C (expansion to EMEA and APAC
+is still underway) and Source B (about 40% of APAC requests are still
+manual).</td>
+</tr><tr class="header">
+<td data-i18n="66">Provisioning time reduced from 12 to 3 days across all regions.</td>
+<td data-i18n="62">Source A</td>
+<td data-i18n="63">Low</td>
+<td data-i18n="64">No</td>
+<td data-i18n="67">Yes. Contradicted by Source B (APAC average is 6 days) and the Part
+4 metrics (EMEA is at 4 days, APAC at 6 days). Only NA reached 3
+days.</td>
+</tr><tr class="odd">
+<td data-i18n="68">Regional adoption reached 95%.</td>
+<td data-i18n="62">Source A</td>
+<td data-i18n="63">Low</td>
+<td data-i18n="64">No</td>
+<td data-i18n="69">Yes. Source C clarifies that 95% adoption applies only to teams in
+the pilot, not to entire regions.</td>
+</tr><tr class="header">
+<td data-i18n="70">APAC still requires manual provisioning for about 40% of requests
+due to legacy dependencies.</td>
+<td data-i18n="71">Source B</td>
+<td data-i18n="72">Medium</td>
+<td data-i18n="73">Yes (internal operations only)</td>
+<td data-i18n="74">Yes. Confirm the current percentage, the specific legacy system
+blockers, and remediation timelines.</td>
+</tr><tr class="odd">
+<td data-i18n="75">Average provisioning duration in APAC remains 6 days.</td>
+<td data-i18n="71">Source B</td>
+<td data-i18n="76">High</td>
+<td data-i18n="77">Yes</td>
+<td data-i18n="78">Partly. Confirmed by the Part 4 metrics (APAC June = 6 days).
+Confirm whether the average includes manual requests (question 9 in
+Deliverable B).</td>
+</tr><tr class="header">
+<td data-i18n="79">95% adoption applies only to teams in the pilot.</td>
+<td data-i18n="80">Source C</td>
+<td data-i18n="72">Medium</td>
+<td data-i18n="81">Yes, with the scope stated</td>
+<td data-i18n="82">Yes. Explains the gap between the executive update and operational
+data. Confirm how adoption is measured (question 2 in Deliverable
+B).</td>
+</tr><tr class="odd">
+<td data-i18n="83">Expansion to EMEA and APAC is still underway.</td>
+<td data-i18n="80">Source C</td>
+<td data-i18n="76">High</td>
+<td data-i18n="77">Yes</td>
+<td data-i18n="84">No. Consistent with Source B and with the metrics, which show EMEA
+and APAC behind NA.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 data-i18n="8" id="publication-validation-questions-deliverable-b">Publication
+validation questions (Deliverable B)</h2>
+<p data-i18n="85">These questions must be answered before any IPAP status, metric, or
+capability claim is published.</p>
+<p data-i18n="86"><strong>Scope and definitions</strong></p>
+<ol type="1">
+<li data-i18n="87">
+What does "global rollout completed" mean, and which regions and
+teams are live today?
+</li>
+<li data-i18n="88">
+How is adoption measured, and what is the 95% based on?
+</li>
+<li data-i18n="89">
+How is provisioning time measured, and does it include time spent
+waiting for security approval?
+</li>
+<li data-i18n="90">
+How is rework defined, and what was the rework rate before IPAP?
+</li>
+</ol>
+<p data-i18n="91"><strong>Data sources</strong></p>
+<ol start="5" type="1">
+<li data-i18n="92">
+Which system do the provisioning and rework numbers come from, and
+who owns that data?
+</li>
+<li data-i18n="93">
+Do the numbers cover only pilot teams, or all requests in each
+region?
+</li>
+</ol>
+<p data-i18n="94"><strong>Conflicting information</strong></p>
+<ol start="7" type="1">
+<li data-i18n="95">
+Does "12 to 3 days" refer only to North America, or was it meant as a
+global number?
+</li>
+<li data-i18n="96">
+Is the 40% manual provisioning figure for APAC still current?
+</li>
+<li data-i18n="97">
+Does the 6-day APAC average include manual requests?
+</li>
+<li data-i18n="98">
+Did anything other than IPAP, such as staffing or request volume,
+help reduce provisioning time?
+</li>
+</ol>
+<p data-i18n="99"><strong>Review and approval</strong></p>
+<ol start="11" type="1">
+<li data-i18n="100">
+As to what date is each statement accurate, and when should it be
+checked again?
+</li>
+<li data-i18n="101">
+Who is the audience, and what decisions will they make from this
+information?
+</li>
+<li data-i18n="102">
+Does any content reveal security controls or approval workarounds
+that should stay restricted?
+</li>
+<li data-i18n="103">
+Who approves this content before it is published, and who keeps it up
+to date?
+</li>
+</ol>
+<h2 data-i18n="9" id="part-2-sme-analysis-deliverable-c">Part 2: SME analysis
+(Deliverable C)</h2>
+<p data-i18n="104"><strong>Missing information</strong></p>
+<ul>
+<li data-i18n="105">
+Which provisioning workflows are fully automated through Jenkins?
+</li>
+<li data-i18n="106">
+What situations still require manual security approval?
+</li>
+<li data-i18n="107">
+What does “Windows support isn’t fully stable” mean?
+</li>
+<li data-i18n="108">
+Is Windows drift detection officially supported for production
+use?
+</li>
+<li data-i18n="109">
+Which inventory synchronization jobs are still being tuned?
+</li>
+<li data-i18n="110">
+What is the operational impact when inventory synchronization fails
+or is delayed?
+</li>
+</ul>
+<p data-i18n="111"><strong>Follow-up questions</strong></p>
+<ul>
+<li data-i18n="112">
+What conditions trigger a manual security review?
+</li>
+<li data-i18n="113">
+Who approves those requests, and does approval affect provisioning
+time?
+</li>
+<li data-i18n="114">
+What specific issues exist with Windows drift detection?
+</li>
+<li data-i18n="115">
+Are there known failure rates or limitations for Windows?
+</li>
+<li data-i18n="116">
+How often do inventory synchronization jobs run?
+</li>
+<li data-i18n="117">
+What happens when synchronization fails?
+</li>
+<li data-i18n="118">
+Are retries, monitoring, and alerts already in place?
+</li>
+<li data-i18n="119">
+What must be completed before these features are considered
+stable?
+</li>
+</ul>
+<p data-i18n="120"><strong>Documentation risks</strong></p>
+<p data-i18n="121">Avoid publishing these as confirmed facts until validated:</p>
+<ul>
+<li data-i18n="122">
+“Provisioning is fully automated.”
+</li>
+<li data-i18n="123">
+“Jenkins handles all provisioning workflows.”
+</li>
+<li data-i18n="124">
+“Windows drift detection is fully supported.”
+</li>
+<li data-i18n="125">
+“Inventory synchronization is stable.”
+</li>
+<li data-i18n="126">
+“No manual intervention is required.”
+</li>
+</ul>
+<p data-i18n="127">Security approval criteria and workarounds should stay restricted,
+even after they are validated.</p>
+<h2 data-i18n="10" id="part-3-information-architecture-deliverable-d">Part 3:
+Information architecture (Deliverable D)</h2>
+<h3 data-i18n="11" id="ipap-knowledge-center">IPAP knowledge center</h3>
+<ul>
+<li>
+<strong>Getting started</strong>
+<ul>
+<li data-i18n="128">
+Program status
+</li>
+<li data-i18n="129">
+Quickstart guide
+</li>
+<li data-i18n="130">
+Access and onboarding
+</li>
+<li data-i18n="131">
+Architecture overview
+</li>
+</ul></li>
+<li>
+<strong>Platform support</strong>
+<ul>
+<li data-i18n="132">
+Linux
+</li>
+<li data-i18n="133">
+Windows (drift detection not yet stable)
+</li>
+<li data-i18n="134">
+Infrastructure footprint
+</li>
+</ul></li>
+<li>
+<strong>Provisioning</strong>
+<ul>
+<li data-i18n="135">
+Automated pipelines
+</li>
+<li data-i18n="136">
+Manual overrides and approvals (restricted)
+</li>
+</ul></li>
+<li>
+<strong>Security and compliance</strong>
+<ul>
+<li data-i18n="137">
+Access control and RBAC
+</li>
+<li data-i18n="138">
+Secrets management (restricted)
+</li>
+<li data-i18n="139">
+Security approvals (restricted)
+</li>
+<li data-i18n="140">
+Compliance auditing
+</li>
+</ul></li>
+<li>
+<strong>Validation</strong>
+<ul>
+<li data-i18n="141">
+Quality gates
+</li>
+<li data-i18n="142">
+Drift detection
+</li>
+<li data-i18n="143">
+Inventory audit
+</li>
+</ul></li>
+<li>
+<strong>Monitoring and observability</strong>
+<ul>
+<li data-i18n="144">
+Provisioning status
+</li>
+<li data-i18n="145">
+Metric definitions
+</li>
+</ul></li>
+<li>
+<strong>Operations and support</strong>
+<ul>
+<li data-i18n="146">
+Known limitations
+</li>
+<li data-i18n="147">
+Troubleshooting
+</li>
+<li data-i18n="47">
+FAQ
+</li>
+<li data-i18n="148">
+Escalation and on-call
+</li>
+</ul></li>
+<li>
+<strong>Governance and release</strong>
+<ul>
+<li data-i18n="149">
+Release notes and change log
+</li>
+<li data-i18n="150">
+Feedback
+</li>
+</ul></li>
+</ul>
+<h3 data-i18n="12" id="information-architecture-overview">1. Information architecture
+overview</h3>
+<p data-i18n="151">The IPAP knowledge center uses a task-based structure that follows
+the order in which users work: getting started, checking platform
+support, provisioning, security, validation, monitoring, operations, and
+governance. Program status, metric definitions, and platform support are
+each defined in one place, so all teams work from the same information.
+Operational guidance, limitations, and release information are kept
+separate so users can find the information based on their role.</p>
+<h3 data-i18n="13" id="intended-users">2. Intended users</h3>
+<p class="sr-only" data-i18n="152" id="tdesc-3">Table: Intended users of the IPAP knowledge center. Eight sections, each with its primary users and what they come for.</p><div class="table-wrap"><table aria-describedby="tdesc-3">
+<thead>
+<tr class="header">
+<th data-i18n="153"><strong>Section</strong></th>
+<th data-i18n="154"><strong>Primary users</strong></th>
+<th data-i18n="155"><strong>What they come for</strong></th>
+</tr>
+</thead>
+<tbody><tr class="odd">
+<td data-i18n="156">Getting started</td>
+<td data-i18n="157">New requesters and approvers</td>
+<td data-i18n="158">Access, onboarding, and how IPAP works</td>
+</tr><tr class="header">
+<td data-i18n="159">Platform support</td>
+<td data-i18n="160">Infrastructure and platform engineers</td>
+<td data-i18n="161">What is supported, by OS and region</td>
+</tr><tr class="odd">
+<td data-i18n="162">Provisioning</td>
+<td data-i18n="163">Infrastructure engineers, operators</td>
+<td data-i18n="164">How to provision, including manual and approval steps</td>
+</tr><tr class="header">
+<td data-i18n="165">Security and compliance</td>
+<td data-i18n="166">Security, compliance, and approvers</td>
+<td data-i18n="167">Access control, approvals, and audit requirements</td>
+</tr><tr class="odd">
+<td data-i18n="168">Validation</td>
+<td data-i18n="169">Operators, QA</td>
+<td data-i18n="170">Quality checks, drift detection, inventory accuracy</td>
+</tr><tr class="header">
+<td data-i18n="171">Monitoring and observability</td>
+<td data-i18n="172">Operations managers, SREs</td>
+<td data-i18n="173">Provisioning status and metric definitions</td>
+</tr><tr class="odd">
+<td data-i18n="174">Operations and support</td>
+<td data-i18n="175">Support engineers, on-call teams</td>
+<td data-i18n="176">Known limitations, troubleshooting, escalation</td>
+</tr><tr class="header">
+<td data-i18n="177">Governance and release</td>
+<td data-i18n="178">Program owners, technical writers</td>
+<td data-i18n="179">Release notes, change history, content ownership</td>
+</tr>
+</tbody>
+</table></div>
+<h3 data-i18n="14" id="content-ownership">3. Content ownership</h3>
+<p data-i18n="180">Each section has one accountable owner, even when several teams
+review it:</p>
+<ul>
+<li data-i18n="181">
+<strong>Engineering SMEs:</strong> technical accuracy and platform
+behavior
+</li>
+<li data-i18n="182">
+<strong>Operations SMEs:</strong> operational procedures,
+troubleshooting, and escalation content
+</li>
+<li data-i18n="183">
+<strong>Security and compliance teams:</strong> security controls,
+approvals, and compliance content
+</li>
+<li data-i18n="184">
+<strong>Technical writers:</strong> structure, consistency,
+usability, and publishing standards
+</li>
+<li data-i18n="185">
+<strong>Program owners:</strong> program status, metrics, and final
+business approval
+</li>
+</ul>
+<h3 data-i18n="15" id="review-and-governance">4. Review and governance</h3>
+<p data-i18n="186">Review frequency depends on how often content changes and how much
+risk an error carries.</p>
+<ul>
+<li data-i18n="187">
+<strong>Every release, with SME sign-off:</strong> platform support,
+provisioning workflows, validation procedures
+</li>
+<li data-i18n="188">
+<strong>Monthly:</strong> known limitations, escalation contacts,
+program status
+</li>
+<li data-i18n="189">
+<strong>Quarterly, or when policy changes:</strong> Security and
+compliance procedures
+</li>
+<li data-i18n="190">
+<strong>Quarterly:</strong> Getting started, FAQ, Troubleshooting
+</li>
+<li data-i18n="191">
+<strong>Before any change:</strong> metric definitions, which need
+program owner approval
+</li>
+</ul>
+<p data-i18n="192">Every update records its reviewer and approval date in the change
+log, so each change can be traced to the person who approved it.</p>
+<h3 data-i18n="16" id="maintenance-strategy">5. Maintenance strategy</h3>
+<p data-i18n="193">The knowledge center stays accurate because every page has an owner,
+a review date, and a clear trigger for updates.</p>
+<ul>
+<li data-i18n="194">
+<strong>Ownership.</strong> Each section has one accountable owner,
+as listed in section 3 titled -Content ownership above in this
+document.
+</li>
+<li data-i18n="195">
+<strong>Scheduled reviews.</strong> Content is reviewed on the
+schedule in section 4 titled Review and governance above this section in
+this document. Pages past their review date are flagged.
+</li>
+<li data-i18n="196">
+<strong>Update triggers.</strong> A pipeline, platform, or process
+change is not complete until the affected pages are updated. Each update
+is recorded in the change log.
+</li>
+<li data-i18n="197">
+<strong>Single source of truth.</strong> Program status, metric
+definitions, and platform support are each defined in one place and
+linked from other pages, so a change is made only once.
+</li>
+<li data-i18n="198">
+<strong>Expiry and retirement.</strong> Each known limitation has an
+owner and a target date. Outdated pages are retired or merged during a
+quarterly content audit.
+</li>
+</ul>
+<h2 data-i18n="17" id="part-4-metrics">Part 4: Metrics </h2>
+<h2 data-i18n="199" id="the-following-data-from-the-challenge-is-used-in-this-section.">The
+following data from the challenge is used in this section.</h2>
+<p class="sr-only" data-i18n="200" id="tdesc-4">Table: Provisioning duration and rework rate by region. NA: 12, 8, and 3 days in January, March, and June, with a 3% rework rate. EMEA: 11, 7, and 4 days, with 5% rework. APAC: 13, 10, and 6 days, with 9% rework.</p><div class="table-wrap"><table aria-describedby="tdesc-4">
+<thead>
+<tr class="header">
+<th data-i18n="201"><strong>Region</strong></th>
+<th data-i18n="202"><strong>January (days)</strong></th>
+<th data-i18n="203"><strong>March (days)</strong></th>
+<th data-i18n="204"><strong>June (days)</strong></th>
+<th data-i18n="205"><strong>Rework rate</strong></th>
+</tr>
+</thead>
+<tbody><tr class="odd">
+<td data-i18n="206"><strong>NA</strong></td>
+<td><strong>12</strong></td>
+<td><strong>8</strong></td>
+<td><strong>3</strong></td>
+<td><strong>3%</strong></td>
+</tr><tr class="header">
+<td data-i18n="207"><strong>EMEA</strong></td>
+<td><strong>11</strong></td>
+<td><strong>7</strong></td>
+<td><strong>4</strong></td>
+<td><strong>5%</strong></td>
+</tr><tr class="odd">
+<td data-i18n="208"><strong>APAC</strong></td>
+<td><strong>13</strong></td>
+<td><strong>10</strong></td>
+<td><strong>6</strong></td>
+<td><strong>9%</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p class="caption" data-i18n="209"><em>Figure 1: Average provisioning duration by region, January to
+June.</em></p>
+<h2 data-i18n="18" id="executive-narrative-deliverable-e">Executive narrative
+(Deliverable E)</h2>
+<p data-i18n="210">The IPAP pilot has reduced provisioning time in all three regions.
+Between January and June, provisioning time dropped from 12 to 3 days in
+North America, from 11 to 4 days in EMEA, and from 13 to 6 days in APAC.
+Faster provisioning means teams get the infrastructure they need
+sooner.</p>
+<p data-i18n="211">However, the program is not ready for a global rollout:</p>
+<ul>
+<li data-i18n="212">
+Expansion to EMEA and APAC is still in progress.
+</li>
+<li data-i18n="213">
+The 95% adoption figure applies only to pilot teams.
+</li>
+<li data-i18n="214">
+The 3-day result applies only to North America.
+</li>
+</ul>
+<p data-i18n="215"><strong>Key risks</strong></p>
+<ul>
+<li data-i18n="216">
+About 40% of APAC requests still require manual provisioning because
+of legacy dependencies. APAC also has the highest rework rate (9%,
+compared to 3% in North America).
+</li>
+<li data-i18n="217">
+Windows drift detection is not yet stable.
+</li>
+<li data-i18n="218">
+Security approvals and inventory synchronization still require manual
+work.
+</li>
+</ul>
+<p data-i18n="219"><strong>Readiness:</strong> IPAP is ready for a phased,
+region-by-region rollout. It is not ready to be announced as a global
+rollout.</p>
+<p data-i18n="220"><strong>Decisions needed from leadership</strong></p>
+<ul>
+<li data-i18n="221">
+Approve readiness criteria for each region.
+</li>
+<li data-i18n="222">
+Approve funding to remove APAC legacy dependencies.
+</li>
+<li data-i18n="223">
+Approve a corrected status update to replace the earlier executive
+update.
+</li>
+</ul>
+<h2 data-i18n="19" id="operations-narrative-deliverable-f">Operations narrative
+(Deliverable F)</h2>
+<p data-i18n="224"><strong>Current state</strong></p>
+<p data-i18n="225">Jenkins now handles provisioning for pilot teams, but some steps are
+still manual:</p>
+<ul>
+<li data-i18n="226">
+Security approvals for exception requests
+</li>
+<li data-i18n="227">
+Requests with legacy dependencies, mainly in APAC
+</li>
+</ul>
+<p data-i18n="228">Two known limitations also affect daily operations: Windows drift
+detection is not yet stable, and inventory synchronization jobs are
+still being tuned.</p>
+<p data-i18n="229"><strong>Regional differences</strong></p>
+<p class="sr-only" data-i18n="230" id="tdesc-5">Table: Regional differences in June. NA: 3 days, 3% rework, can be used as the reference. EMEA: 4 days, 5% rework, expansion in progress. APAC: 6 days, 9% rework, expansion in progress, with about 40% of requests still manual.</p><div class="table-wrap"><table aria-describedby="tdesc-5">
+<thead>
+<tr class="header">
+<th data-i18n="201"><strong>Region</strong></th>
+<th data-i18n="231"><strong>June provisioning time</strong></th>
+<th data-i18n="205"><strong>Rework rate</strong></th>
+<th data-i18n="232"><strong>Notes</strong></th>
+</tr>
+</thead>
+<tbody><tr class="odd">
+<td data-i18n="32">NA</td>
+<td data-i18n="233">3 days</td>
+<td>3%</td>
+<td data-i18n="234">Closest to the target state. Can be used as the reference.</td>
+</tr><tr class="header">
+<td data-i18n="34">EMEA</td>
+<td data-i18n="235">4 days</td>
+<td>5%</td>
+<td data-i18n="236">Expansion in progress. Document gaps during onboarding.</td>
+</tr><tr class="odd">
+<td data-i18n="36">APAC</td>
+<td data-i18n="237">6 days</td>
+<td>9%</td>
+<td data-i18n="238">Expansion in progress. About 40% of requests are still manual.</td>
+</tr>
+</tbody>
+</table></div>
+<p data-i18n="239"><strong>What teams should do for now</strong></p>
+<ul>
+<li data-i18n="240">
+Check Windows hosts for drift manually.
+</li>
+<li data-i18n="241">
+Confirm inventory records before submitting a provisioning
+request.
+</li>
+<li data-i18n="242">
+Use the manual workflow for requests with legacy dependencies.
+</li>
+</ul>
+<p data-i18n="243"><strong>Adoption considerations</strong></p>
+<p data-i18n="244">The 95% adoption figure covers only pilot teams. Before onboarding
+new teams, adoption should be defined as the percentage of requests
+completed without manual steps, and each region should have a
+baseline.</p>
+<p data-i18n="245"><strong>Improvement opportunities</strong></p>
+<ul>
+<li data-i18n="246">
+Create a plan to remove or work around each APAC legacy
+dependency.
+</li>
+<li data-i18n="247">
+Track rework by root cause.
+</li>
+<li data-i18n="248">
+Define when Windows drift detection is considered stable.
+</li>
+<li data-i18n="249">
+Measure how many requests need manual security approval and how long
+they wait.
+</li>
+<li data-i18n="250">
+Report median and P90 provisioning time separately for automated and
+manual requests.
+</li>
+</ul>
+<h2 data-i18n="20" id="dashboard-recommendation-deliverable-g">Dashboard recommendation
+(Deliverable G)</h2>
+<p data-i18n="251">A monthly leadership dashboard shows whether IPAP is working, whether
+it is safe to expand, and what needs a decision. Each metric appears by
+region, with a trend over time, and lists its definition, data source,
+owner, and last update date.<br/>
+<br/>
+The following figure shows the average provisioning time for each region
+from January to June. Provisioning time dropped in all three regions,
+but only North America reached 3 days.<br/>
+<br/>
+</p><figure><img alt="Line chart of average provisioning duration by region, January to June. All three regions improved. NA dropped from 12 to 8 to 3 days. EMEA dropped from 11 to 7 to 4 days. APAC dropped from 13 to 10 to 6 days. Only NA reached 3 days." data-i18n-alt="253" src="data:image/png;base64,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fvrpp1wURRkQyDmBsj9kPufEGrHAv/76y26//XZ75plnTF/A2267rR1xxBE2ceJEe/nll+3LL78MX5rbb7+9HXzwwSFv+/btbZtttjF9IQ8ZMsQuvfRS05frVVddZbIg6Vn3++23n+2www4mS9KPP/5or7zyinXt2tU++OADO+2000KP33jjjfAr+qijjmpEAlQNgb8JLLroovbLL7/Yp59+aiuttFJ4gtlXX31lCy64YMiQ6W9Fn+Px48eHJ51tttlm1rdv3/A38dFHH9nGG29shx56aLhfZV9//fX2/PPPW5cuXUwPqcBBoBQJvPrqqzZ58mQ75JBDQvPPP/9869Gjh/36669pvzeU6a233grfB02bNrV99tnH1llnnVLsOm0uYgJYPot4cFKb9uSTTwZBKRE5ePDgEJ46dWqw9kg4rr/++iZxeNNNNwXhOGXKFJs+fXooRl/GkyZNCuErrrjCZsyYYaeffnoQsGeccUaIV1n33nuv9erVy/RY0ueee84+/PDDkCbRu/jii4cwbxBobAL6UtSPqnHjxoWmPP744+EHk7cr09+KBOro0aODoOzYsaMdd9xx4Uv4pJNOCl/QN998cyhCfzfLLLNM+MIeOXKkffLJJ140PgRKisDXX38dxKQ3+rXXXgsWUc0epPve0N+Ivl922WWX6r+xbUMYC6rTw88VASyfuSJZgHK22247W3HFFYN1U0KxWbNmiWkVWYL69esXWvGPf/wjCNJMTTr22GNNlh5ZPj///HObN29eYlq/W7du4Vex7tWX+8MPPxy+gGVdHTZsWKYiiYdAwQnstttuph9OAwcOtLFjx9rw4cODr4bU9LfSrl0722uvvcJswPvvvx9+xK2wwgp2wQUXhL8FWf6XX3556969e+iT8mtWYeWVVy54H6kQAvkkkO5748UXX7Qll1wyYbhYbLHF7KmnnrLevXvnsymUXWEEsHwW4YBrc5EsOXKyWMpJaGq68LDDDgsWSU2na4rRH3mqL0t3/ghRPW3A74/XwV155ZU2dOhQk4Bdc801w21ejv7puJMF9NFHH7XHHnvM1l13XVtiiSU8CR8CjU5AlktNj7/wwgvBX2ONNRJtqulvxT/jc+bMCfn15SrXokULk0VVTl/K7vR35n9HHocPgWIkMGbMmPCjSm2bO3duWFalsAwM7mbNmuXB8CPLL/x7Q5bSli1bhs+8Pveaotf3DQ4CuSSA+MwlzRyVJdEoi46mRd5+++0gPCX8nn32Wdtxxx3trLPOsk6dOpn+icT/VFKrb9WqVbBwKl47eN1pzaimG0888cTEGrl05WgaX1/ImnaUEMVBoJgISCjq7+HUU08NU4Rx2+ryt7LIIovY6quvbk888US49eqrr7aLLrooLoYwBEqKwI033hj2BGjt/vfffx9Eo74HfIarLpuQ9DclA0jPnj2tf//+4Xvnt99+KykONLb4CTDtXoRjJKuLfm3uueeeQVzK2iknAajjM+Tri1fT69Oqj5VZeuml0/Zijz32CGtAtZmoQ4cOiTzaYKSjZEaMGGFt27YN4lb/lOQkfGOnMu644w7r3LlzHE0YAkVBYOeddw5T7ZqCj12mv5VU673WSEtwagPesssuG8JvvvlmXBRhCJQMAW0q0vKR2bNnmzbU6ceVlpTIiKBNpLJoLrXUUjX2RzMK+s7QMi5ZPmWE2HbbbWu8h0QIZEugSfV0a1VdbsrmgfF1KY88tROQZVO70X06RHdouPSrtK6bf/TPQ1OTPrXotWrKUf+g9Ku4JnfJJZeE6Zvjjz++pmykQaDoCGTztyLLTm1/C0XXQRoEgTQE9D9fp6G0bt06KVXWUH1vpBoYkjJFF5q210uCFQeBuhDIRiciPutCtELz6JfvDz/8ECyfsgrhIAABCEAAAhCAQDoCiM90VIjLmsB7770XpuXramXNugJugAAEIAABCECgLAggPstiGOkEBCAAAQhAAAIQKA0C2YhPdruXxpjSSghAAAIQgAAEIFAWBBCfZTGMdAICEIAABCAAAQiUBgHEZ2mME62EAAQgAAEIQAACZUEA8VkWw0gnIAABCEAAAhCAQGkQQHyWxjjRSghAAAIQgAAEIFAWBBCfZTGMdAICEIAABCAAAQiUBgHEZ2mME62EAAQgAAEIQAACZUEA8VkWw0gnIAABCEAAAhCAQGkQQHyWxjjRSghAAAIQgAAEIFAWBBCfZTGMdAICEIAABCAAAQiUBgHEZ2mME62EAAQgAAEIQAACZUEA8VkWw0gnIAABCEAAAhCAQGkQQHyWxjjRSghAAAIQgAAEIFAWBBCfZTGMdAICEIAABCAAAQiUBgHEZ2mME62EAAQgAAEIQAACZUEA8VkWw0gnIAABCEAAAhCAQGkQQHyWxjjRSghAAAIQgAAEIFAWBBCfZTGMdAICEIAABCAAAQiUBgHEZ2mME62EAAQgAAEIQAACZUEA8VkWw0gnIAABCEAAAhCAQGkQQHyWxjjRSghAAAIQgAAEIFAWBBCfZTGMdAICEIAABCAAAQiUBgHEZ2mME62EAAQgAAEIQAACZUEA8VkWw0gnIAABCEAAAhCAQGkQQHyWxjjRSghAAAIQgAAEIFAWBBCfZTGMdAICEIAABCAAAQiUBgHEZ2mME62EAAQgAAEIQAACZUEA8VkWw0gnIAABCEAAAhCAQGkQaF4azcxPK//880+77bbbbOONN7b11lsvqRLFb7rpprbqqqsm4mfNmmV33HGHrbvuurbJJpsk4islMHfuXLv55pvTdneJJZawXr162aeffmpPP/20tW/f3nbaaaekvN9//709+OCDtvLKK9t2221nr7/+ur311ltJefxihx12sBVXXNEvE+V27drVll9++UR8JQYmTJhg7733nu233362wAILJBC88sor9s477ySumzdvbssuu6xtu+221rJly0S8j1EmlrNnz7ZJkybZyy+/HO7p0qWLrbnmmtakSZNEGQQgAAEIQAAC9SVQ0eLz999/t6FDh1qbNm3s1VdftUUXXTTB8ZRTTrELLrggSXw+/PDDIf/qq69uL774YiJvpQTmzJkT+v8///M/tvTSSyd1W4JS4vPtt98OeVq3bm0fffRRkji6//777cQTT7Q999wziM8nnngiMJbIT3XrrLNOkvi87LLL7JZbbrFPPvnEzjrrrNTsFXP9119/2THHHGPTpk2ztm3b2m677Zbo+2OPPWaXXnpp+NGkyD9T9KLJAAAIDElEQVT++COIe32+n3vuuSBEFV8TS/3A2muvvWz8+PFBtCr/aaedFuoRfxwEIAABCECgoQQqWnw6vO+++85OPfVUu+iiizwqrS9raP/+/e322283WZnSiaa0N5ZZ5Omnn24777xzjb369ddfg0DfZpttEvnuvvvuRNgDa6+9tj3yyCN+mdZXWRI+AwYMCJbqk08+2Vq1apU2b7lHyhop4SmBeMMNNySJT/W9Y8eOSTyVt1OnTsFi/89//tNqY3n44Yfb+++/b++++24QtypTFmpZse+7777wA0NxOAhAAAIQgEB9CbDms5rcgQceGKaTn3nmmYwcNVUpa5CmOrfaaquM088ZC6iwhD322MPG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"/></figure><details class="textdesc"><summary data-i18n="252">Text description of the chart</summary><p data-i18n="253">Line chart of average provisioning duration by region, January to June. All three regions improved. NA dropped from 12 to 8 to 3 days. EMEA dropped from 11 to 7 to 4 days. APAC dropped from 13 to 10 to 6 days. Only NA reached 3 days.</p></details>
+<p class="sr-only" data-i18n="254" id="tdesc-6">Table: Recommended dashboard metrics. Eight metrics, each with what it tracks and why it matters: rollout progress, automation rate, provisioning time, rework rate, manual security approvals, drift detection coverage, inventory accuracy, and readiness status.</p><div class="table-wrap"><table aria-describedby="tdesc-6">
+<thead>
+<tr class="header">
+<th data-i18n="255"><strong>Metric</strong></th>
+<th data-i18n="256"><strong>What it tracks</strong></th>
+<th data-i18n="257"><strong>Why it matters</strong></th>
+</tr>
+</thead>
+<tbody><tr class="odd">
+<td data-i18n="258">Rollout progress</td>
+<td data-i18n="259">Regions and teams that are live, compared to the plan</td>
+<td data-i18n="260">Shows actual progress instead of general claims</td>
+</tr><tr class="header">
+<td data-i18n="261">Automation rate</td>
+<td data-i18n="262">Requests completed without manual steps</td>
+<td data-i18n="263">Shows how many teams really use IPAP</td>
+</tr><tr class="odd">
+<td data-i18n="264">Provisioning time</td>
+<td data-i18n="265">Median and P90 days, for automated and manual requests</td>
+<td data-i18n="266">Shows how fast provisioning is, including long delays</td>
+</tr><tr class="header">
+<td data-i18n="267">Rework rate</td>
+<td data-i18n="268">Requests that need to be fixed</td>
+<td data-i18n="269">Shows whether faster provisioning affects quality</td>
+</tr><tr class="odd">
+<td data-i18n="270">Manual security approvals</td>
+<td data-i18n="271">Number of approvals and how long they take</td>
+<td data-i18n="272">Shows whether approvals are causing delays</td>
+</tr><tr class="header">
+<td data-i18n="273">Drift detection coverage</td>
+<td data-i18n="274">Hosts covered, by OS</td>
+<td data-i18n="275">Shows gaps in compliance, such as Windows</td>
+</tr><tr class="odd">
+<td data-i18n="276">Inventory accuracy</td>
+<td data-i18n="277">Records that match, and how long sync takes</td>
+<td data-i18n="278">Shows whether automation is using correct data</td>
+</tr><tr class="header">
+<td data-i18n="279">Readiness status</td>
+<td data-i18n="280">Ready, in progress, or not ready, for each region</td>
+<td data-i18n="281">Shows which regions can move forward</td>
+</tr>
+</tbody>
+</table></div>
+<h2 data-i18n="21" id="part-5-leadership-recommendation-deliverable-h">Part 5:
+Leadership recommendation (Deliverable H)</h2>
+<p data-i18n="282"><strong>Is the program ready for broader rollout?</strong></p>
+<p data-i18n="283">Yes, for a phased rollout, one region at a time. No, for a global
+rollout announcement. North America is the reference region. APAC moves
+to full rollout only after there is a plan for its legacy
+dependencies.</p>
+<p data-i18n="284"><strong>Facts</strong></p>
+<p data-i18n="285">The sources and the metrics data state the following:</p>
+<ul>
+<li data-i18n="286">
+Provisioning time dropped in all regions from January to June: NA
+from 12 to 3 days, EMEA from 11 to 4 days, and APAC from 13 to 6
+days.
+</li>
+<li data-i18n="287">
+The 95% adoption applies only to pilot teams.
+</li>
+<li data-i18n="212">
+Expansion to EMEA and APAC is still in progress.
+</li>
+<li data-i18n="288">
+Rework rates are 3% in NA, 5% in EMEA, and 9% in APAC.
+</li>
+<li data-i18n="289">
+Some security approvals are still manual.
+</li>
+<li data-i18n="217">
+Windows drift detection is not yet stable.
+</li>
+</ul>
+<p data-i18n="290"><strong>Assumptions</strong></p>
+<p data-i18n="291">The following statements are my assumptions but not confirmed:</p>
+<ul>
+<li data-i18n="292">
+Provisioning times are averages of all requests in each region.
+</li>
+<li data-i18n="293">
+IPAP is the main reason for the improvement, not changes in staffing
+or request volume.
+</li>
+<li data-i18n="294">
+About 40% of APAC requests are still manual.
+</li>
+<li data-i18n="295">
+The higher rework rate in APAC is caused by manual provisioning or
+legacy dependencies.
+</li>
+</ul>
+<p data-i18n="296"><strong>Risks and remaining concerns</strong></p>
+<ul>
+<li data-i18n="297">
+<strong>Credibility:</strong> The earlier executive update may have
+already influenced decisions.
+</li>
+<li data-i18n="298">
+<strong>Scaling:</strong> Manual work and rework in APAC can increase
+as request volume grows.
+</li>
+<li data-i18n="299">
+<strong>Compliance:</strong> Windows hosts do not have stable drift
+detection.
+</li>
+<li data-i18n="300">
+<strong>Data quality:</strong> Provisioning can rely on inventory
+records that are out of date.
+</li>
+</ul>
+<p data-i18n="301"><strong>Information to validate before publication</strong></p>
+<ul>
+<li data-i18n="302">
+Rollout status and dates for each region
+</li>
+<li data-i18n="303">
+How adoption and provisioning time are measured
+</li>
+<li data-i18n="304">
+Whether the numbers cover only pilot teams
+</li>
+<li data-i18n="305">
+The current percentage of manual requests in APAC
+</li>
+<li data-i18n="306">
+Support status for Windows and Linux
+</li>
+</ul>
+<p data-i18n="307"><strong>Recommendations</strong></p>
+<p data-i18n="308">Before moving forward, leadership needs to:</p>
+<ol type="1">
+<li data-i18n="309">
+Publish a corrected status update with dates.
+</li>
+<li data-i18n="310">
+Approve standard definitions for adoption, provisioning time, and
+rework.
+</li>
+<li data-i18n="311">
+Agree on readiness criteria for each region, such as a target
+automation rate and a maximum rework rate.
+</li>
+<li data-i18n="312">
+Fund a plan to remove or work around APAC legacy dependencies.
+</li>
+<li data-i18n="313">
+Define when Windows drift detection is stable.
+</li>
+<li data-i18n="314">
+Launch the IPAP knowledge center, with named owners, before the next
+region goes live.
+</li>
+</ol>
+<h2 data-i18n="22" id="part-6-ai-usage-record-deliverable-i">Part 6: AI usage record
+(Deliverable I)</h2>
+<p data-i18n="315">I used Claude (Anthropic) during this challenge. The final content,
+ratings, and recommendations are my decisions.</p>
+<p data-i18n="316">Section 1: Prompts used</p>
+<ul>
+<li data-i18n="317">
+Shared my own draft and asked it to modify a few sections for
+consistency.
+</li>
+<li data-i18n="318">
+Asked for feedback on specific sections, such as the maintenance
+strategy and information architecture, and to rewrite the validation
+questions in my style.
+</li>
+<li data-i18n="319">
+Asked to include a diagram for provisioning time trends.
+</li>
+<li data-i18n="320">
+Create a localhost webpage to publish this document.
+</li>
+<li data-i18n="321">
+Create a multilingual (5 languages) option with a dropdown for people
+from different regions to be able to read this document in the language
+of their choice.
+</li>
+</ul>
+<p data-i18n="322">Section 2: Outputs accepted</p>
+<ul>
+<li data-i18n="323">
+Suggestions to make the information architecture overview, intended
+users, review cycles, and maintenance strategy more specific.
+</li>
+<li data-i18n="324">
+The provisioning time trend chart.
+</li>
+<li data-i18n="325">
+Index.html to view the document as a webpage.(I’ll share this in our
+meeting today)
+</li>
+</ul>
+<p data-i18n="326">Section 3: Outputs rejected or changed</p>
+<ul>
+<li data-i18n="327">
+Rejected a few drafts because the tone was persuasive rather than
+technical.
+</li>
+<li data-i18n="328">
+Rejected the colored, heavily formatted layout for the trend
+chart.
+</li>
+<li data-i18n="329">
+Kept my own structure for the analysis instead of the AI’s table
+format.
+</li>
+</ul>
+</main>
+</div>
+<script>
+const I18N = {"en": ["IPAP Pilot Assessment and Rollout Recommendation", "Workforce Experience Challenge | Technical writer, data center operations and engineering", "Download the Word version", "Contents", "Introduction", "Abbreviations", "Part 1: Conflicting information analysis", "Information confidence matrix (Deliverable A)", "Publication validation questions (Deliverable B)", "Part 2: SME analysis (Deliverable C)", "Part 3: Information architecture (Deliverable D)", "IPAP knowledge center", "1. Information architecture overview", "2. Intended users", "3. Content ownership", "4. Review and governance", "5. Maintenance strategy", "Part 4: Metrics", "Executive narrative (Deliverable E)", "Operations narrative (Deliverable F)", "Dashboard recommendation (Deliverable G)", "Part 5: Leadership recommendation (Deliverable H)", "Part 6: AI usage record (Deliverable I)", "This document presents my assessment of the Infrastructure Provisioning Automation Program (IPAP) based on the information provided in the challenge. The goal is to evaluate conflicting and incomplete information, identify what can be trusted or require further validation, and organize the findings into clear, usable documentation. It also covers information architecture, content governance, audience-specific communication, key metrics, and a final recommendation on the program’s readiness for broader rollout.", "The following abbreviations are used throughout this document to refer to key programs, roles, regions, and technologies.", "Table: Abbreviations used in this document. Two columns: abbreviation and expanded form. Twelve rows, from IPAP (Infrastructure Provisioning Automation Program) to AI (artificial intelligence).", "<strong>Abbreviation</strong>", "<strong>Expanded form</strong>", "IPAP", "Infrastructure Provisioning Automation Program", "SME", "Subject matter expert", "NA", "North America", "EMEA", "Europe, Middle East, and Africa", "APAC", "Asia-Pacific", "OS", "Operating system", "RBAC", "Role-based access control", "QA", "Quality assurance", "SRE", "Site reliability engineer", "90th percentile", "FAQ", "Frequently asked question", "AI", "Artificial intelligence", "Each statement is rated using the following confidence levels:", "<strong>High:</strong> Confirmed by two or more sources, or by the metrics data.", "<strong>Medium:</strong> Comes from one reliable source, but is approximate, undated, or not fully defined.", "<strong>Low:</strong> Contradicted by another source, or a limited result presented as a general one.", "Table: Information confidence matrix. Seven statements from Sources A, B, and C, each with a confidence level, whether to publish it, and whether validation is required. The three Source A statements are rated Low and should not be published.", "<strong>Statement</strong>", "<strong>Source</strong>", "<strong>Confidence level</strong>", "<strong>Publish?</strong>", "<strong>Requires validation?</strong>", "IPAP global rollout successfully completed.", "Source A", "Low", "No", "Yes. Directly contradicted by Source C (expansion to EMEA and APAC is still underway) and Source B (about 40% of APAC requests are still manual).", "Provisioning time reduced from 12 to 3 days across all regions.", "Yes. Contradicted by Source B (APAC average is 6 days) and the Part 4 metrics (EMEA is at 4 days, APAC at 6 days). Only NA reached 3 days.", "Regional adoption reached 95%.", "Yes. Source C clarifies that 95% adoption applies only to teams in the pilot, not to entire regions.", "APAC still requires manual provisioning for about 40% of requests due to legacy dependencies.", "Source B", "Medium", "Yes (internal operations only)", "Yes. Confirm the current percentage, the specific legacy system blockers, and remediation timelines.", "Average provisioning duration in APAC remains 6 days.", "High", "Yes", "Partly. Confirmed by the Part 4 metrics (APAC June = 6 days). Confirm whether the average includes manual requests (question 9 in Deliverable B).", "95% adoption applies only to teams in the pilot.", "Source C", "Yes, with the scope stated", "Yes. Explains the gap between the executive update and operational data. Confirm how adoption is measured (question 2 in Deliverable B).", "Expansion to EMEA and APAC is still underway.", "No. Consistent with Source B and with the metrics, which show EMEA and APAC behind NA.", "These questions must be answered before any IPAP status, metric, or capability claim is published.", "<strong>Scope and definitions</strong>", "What does \"global rollout completed\" mean, and which regions and teams are live today?", "How is adoption measured, and what is the 95% based on?", "How is provisioning time measured, and does it include time spent waiting for security approval?", "How is rework defined, and what was the rework rate before IPAP?", "<strong>Data sources</strong>", "Which system do the provisioning and rework numbers come from, and who owns that data?", "Do the numbers cover only pilot teams, or all requests in each region?", "<strong>Conflicting information</strong>", "Does \"12 to 3 days\" refer only to North America, or was it meant as a global number?", "Is the 40% manual provisioning figure for APAC still current?", "Does the 6-day APAC average include manual requests?", "Did anything other than IPAP, such as staffing or request volume, help reduce provisioning time?", "<strong>Review and approval</strong>", "As to what date is each statement accurate, and when should it be checked again?", "Who is the audience, and what decisions will they make from this information?", "Does any content reveal security controls or approval workarounds that should stay restricted?", "Who approves this content before it is published, and who keeps it up to date?", "<strong>Missing information</strong>", "Which provisioning workflows are fully automated through Jenkins?", "What situations still require manual security approval?", "What does “Windows support isn’t fully stable” mean?", "Is Windows drift detection officially supported for production use?", "Which inventory synchronization jobs are still being tuned?", "What is the operational impact when inventory synchronization fails or is delayed?", "<strong>Follow-up questions</strong>", "What conditions trigger a manual security review?", "Who approves those requests, and does approval affect provisioning time?", "What specific issues exist with Windows drift detection?", "Are there known failure rates or limitations for Windows?", "How often do inventory synchronization jobs run?", "What happens when synchronization fails?", "Are retries, monitoring, and alerts already in place?", "What must be completed before these features are considered stable?", "<strong>Documentation risks</strong>", "Avoid publishing these as confirmed facts until validated:", "“Provisioning is fully automated.”", "“Jenkins handles all provisioning workflows.”", "“Windows drift detection is fully supported.”", "“Inventory synchronization is stable.”", "“No manual intervention is required.”", "Security approval criteria and workarounds should stay restricted, even after they are validated.", "Program status", "Quickstart guide", "Access and onboarding", "Architecture overview", "Linux", "Windows (drift detection not yet stable)", "Infrastructure footprint", "Automated pipelines", "Manual overrides and approvals (restricted)", "Access control and RBAC", "Secrets management (restricted)", "Security approvals (restricted)", "Compliance auditing", "Quality gates", "Drift detection", "Inventory audit", "Provisioning status", "Metric definitions", "Known limitations", "Troubleshooting", "Escalation and on-call", "Release notes and change log", "Feedback", "The IPAP knowledge center uses a task-based structure that follows the order in which users work: getting started, checking platform support, provisioning, security, validation, monitoring, operations, and governance. Program status, metric definitions, and platform support are each defined in one place, so all teams work from the same information. Operational guidance, limitations, and release information are kept separate so users can find the information based on their role.", "Table: Intended users of the IPAP knowledge center. Eight sections, each with its primary users and what they come for.", "<strong>Section</strong>", "<strong>Primary users</strong>", "<strong>What they come for</strong>", "Getting started", "New requesters and approvers", "Access, onboarding, and how IPAP works", "Platform support", "Infrastructure and platform engineers", "What is supported, by OS and region", "Provisioning", "Infrastructure engineers, operators", "How to provision, including manual and approval steps", "Security and compliance", "Security, compliance, and approvers", "Access control, approvals, and audit requirements", "Validation", "Operators, QA", "Quality checks, drift detection, inventory accuracy", "Monitoring and observability", "Operations managers, SREs", "Provisioning status and metric definitions", "Operations and support", "Support engineers, on-call teams", "Known limitations, troubleshooting, escalation", "Governance and release", "Program owners, technical writers", "Release notes, change history, content ownership", "Each section has one accountable owner, even when several teams review it:", "<strong>Engineering SMEs:</strong> technical accuracy and platform behavior", "<strong>Operations SMEs:</strong> operational procedures, troubleshooting, and escalation content", "<strong>Security and compliance teams:</strong> security controls, approvals, and compliance content", "<strong>Technical writers:</strong> structure, consistency, usability, and publishing standards", "<strong>Program owners:</strong> program status, metrics, and final business approval", "Review frequency depends on how often content changes and how much risk an error carries.", "<strong>Every release, with SME sign-off:</strong> platform support, provisioning workflows, validation procedures", "<strong>Monthly:</strong> known limitations, escalation contacts, program status", "<strong>Quarterly, or when policy changes:</strong> Security and compliance procedures", "<strong>Quarterly:</strong> Getting started, FAQ, Troubleshooting", "<strong>Before any change:</strong> metric definitions, which need program owner approval", "Every update records its reviewer and approval date in the change log, so each change can be traced to the person who approved it.", "The knowledge center stays accurate because every page has an owner, a review date, and a clear trigger for updates.", "<strong>Ownership.</strong> Each section has one accountable owner, as listed in section 3 titled -Content ownership above in this document.", "<strong>Scheduled reviews.</strong> Content is reviewed on the schedule in section 4 titled Review and governance above this section in this document. Pages past their review date are flagged.", "<strong>Update triggers.</strong> A pipeline, platform, or process change is not complete until the affected pages are updated. Each update is recorded in the change log.", "<strong>Single source of truth.</strong> Program status, metric definitions, and platform support are each defined in one place and linked from other pages, so a change is made only once.", "<strong>Expiry and retirement.</strong> Each known limitation has an owner and a target date. Outdated pages are retired or merged during a quarterly content audit.", "The following data from the challenge is used in this section.", "Table: Provisioning duration and rework rate by region. NA: 12, 8, and 3 days in January, March, and June, with a 3% rework rate. EMEA: 11, 7, and 4 days, with 5% rework. APAC: 13, 10, and 6 days, with 9% rework.", "<strong>Region</strong>", "<strong>January (days)</strong>", "<strong>March (days)</strong>", "<strong>June (days)</strong>", "<strong>Rework rate</strong>", "<strong>NA</strong>", "<strong>EMEA</strong>", "<strong>APAC</strong>", "<em>Figure 1: Average provisioning duration by region, January to June.</em>", "The IPAP pilot has reduced provisioning time in all three regions. Between January and June, provisioning time dropped from 12 to 3 days in North America, from 11 to 4 days in EMEA, and from 13 to 6 days in APAC. Faster provisioning means teams get the infrastructure they need sooner.", "However, the program is not ready for a global rollout:", "Expansion to EMEA and APAC is still in progress.", "The 95% adoption figure applies only to pilot teams.", "The 3-day result applies only to North America.", "<strong>Key risks</strong>", "About 40% of APAC requests still require manual provisioning because of legacy dependencies. APAC also has the highest rework rate (9%, compared to 3% in North America).", "Windows drift detection is not yet stable.", "Security approvals and inventory synchronization still require manual work.", "<strong>Readiness:</strong> IPAP is ready for a phased, region-by-region rollout. It is not ready to be announced as a global rollout.", "<strong>Decisions needed from leadership</strong>", "Approve readiness criteria for each region.", "Approve funding to remove APAC legacy dependencies.", "Approve a corrected status update to replace the earlier executive update.", "<strong>Current state</strong>", "Jenkins now handles provisioning for pilot teams, but some steps are still manual:", "Security approvals for exception requests", "Requests with legacy dependencies, mainly in APAC", "Two known limitations also affect daily operations: Windows drift detection is not yet stable, and inventory synchronization jobs are still being tuned.", "<strong>Regional differences</strong>", "Table: Regional differences in June. NA: 3 days, 3% rework, can be used as the reference. EMEA: 4 days, 5% rework, expansion in progress. APAC: 6 days, 9% rework, expansion in progress, with about 40% of requests still manual.", "<strong>June provisioning time</strong>", "<strong>Notes</strong>", "3 days", "Closest to the target state. Can be used as the reference.", "4 days", "Expansion in progress. Document gaps during onboarding.", "6 days", "Expansion in progress. About 40% of requests are still manual.", "<strong>What teams should do for now</strong>", "Check Windows hosts for drift manually.", "Confirm inventory records before submitting a provisioning request.", "Use the manual workflow for requests with legacy dependencies.", "<strong>Adoption considerations</strong>", "The 95% adoption figure covers only pilot teams. Before onboarding new teams, adoption should be defined as the percentage of requests completed without manual steps, and each region should have a baseline.", "<strong>Improvement opportunities</strong>", "Create a plan to remove or work around each APAC legacy dependency.", "Track rework by root cause.", "Define when Windows drift detection is considered stable.", "Measure how many requests need manual security approval and how long they wait.", "Report median and P90 provisioning time separately for automated and manual requests.", "A monthly leadership dashboard shows whether IPAP is working, whether it is safe to expand, and what needs a decision. Each metric appears by region, with a trend over time, and lists its definition, data source, owner, and last update date.<br/> <br/> The following figure shows the average provisioning time for each region from January to June. Provisioning time dropped in all three regions, but only North America reached 3 days.<br/> <br/>", "Text description of the chart", "Line chart of average provisioning duration by region, January to June. All three regions improved. NA dropped from 12 to 8 to 3 days. EMEA dropped from 11 to 7 to 4 days. APAC dropped from 13 to 10 to 6 days. Only NA reached 3 days.", "Table: Recommended dashboard metrics. Eight metrics, each with what it tracks and why it matters: rollout progress, automation rate, provisioning time, rework rate, manual security approvals, drift detection coverage, inventory accuracy, and readiness status.", "<strong>Metric</strong>", "<strong>What it tracks</strong>", "<strong>Why it matters</strong>", "Rollout progress", "Regions and teams that are live, compared to the plan", "Shows actual progress instead of general claims", "Automation rate", "Requests completed without manual steps", "Shows how many teams really use IPAP", "Provisioning time", "Median and P90 days, for automated and manual requests", "Shows how fast provisioning is, including long delays", "Rework rate", "Requests that need to be fixed", "Shows whether faster provisioning affects quality", "Manual security approvals", "Number of approvals and how long they take", "Shows whether approvals are causing delays", "Drift detection coverage", "Hosts covered, by OS", "Shows gaps in compliance, such as Windows", "Inventory accuracy", "Records that match, and how long sync takes", "Shows whether automation is using correct data", "Readiness status", "Ready, in progress, or not ready, for each region", "Shows which regions can move forward", "<strong>Is the program ready for broader rollout?</strong>", "Yes, for a phased rollout, one region at a time. No, for a global rollout announcement. North America is the reference region. APAC moves to full rollout only after there is a plan for its legacy dependencies.", "<strong>Facts</strong>", "The sources and the metrics data state the following:", "Provisioning time dropped in all regions from January to June: NA from 12 to 3 days, EMEA from 11 to 4 days, and APAC from 13 to 6 days.", "The 95% adoption applies only to pilot teams.", "Rework rates are 3% in NA, 5% in EMEA, and 9% in APAC.", "Some security approvals are still manual.", "<strong>Assumptions</strong>", "The following statements are my assumptions but not confirmed:", "Provisioning times are averages of all requests in each region.", "IPAP is the main reason for the improvement, not changes in staffing or request volume.", "About 40% of APAC requests are still manual.", "The higher rework rate in APAC is caused by manual provisioning or legacy dependencies.", "<strong>Risks and remaining concerns</strong>", "<strong>Credibility:</strong> The earlier executive update may have already influenced decisions.", "<strong>Scaling:</strong> Manual work and rework in APAC can increase as request volume grows.", "<strong>Compliance:</strong> Windows hosts do not have stable drift detection.", "<strong>Data quality:</strong> Provisioning can rely on inventory records that are out of date.", "<strong>Information to validate before publication</strong>", "Rollout status and dates for each region", "How adoption and provisioning time are measured", "Whether the numbers cover only pilot teams", "The current percentage of manual requests in APAC", "Support status for Windows and Linux", "<strong>Recommendations</strong>", "Before moving forward, leadership needs to:", "Publish a corrected status update with dates.", "Approve standard definitions for adoption, provisioning time, and rework.", "Agree on readiness criteria for each region, such as a target automation rate and a maximum rework rate.", "Fund a plan to remove or work around APAC legacy dependencies.", "Define when Windows drift detection is stable.", "Launch the IPAP knowledge center, with named owners, before the next region goes live.", "I used Claude (Anthropic) during this challenge. The final content, ratings, and recommendations are my decisions.", "Section 1: Prompts used", "Shared my own draft and asked it to modify a few sections for consistency.", "Asked for feedback on specific sections, such as the maintenance strategy and information architecture, and to rewrite the validation questions in my style.", "Asked to include a diagram for provisioning time trends.", "Create a localhost webpage to publish this document.", "Create a multilingual (5 languages) option with a dropdown for people from different regions to be able to read this document in the language of their choice.", "Section 2: Outputs accepted", "Suggestions to make the information architecture overview, intended users, review cycles, and maintenance strategy more specific.", "The provisioning time trend chart.", "Index.html to view the document as a webpage.(I’ll share this in our meeting today)", "Section 3: Outputs rejected or changed", "Rejected a few drafts because the tone was persuasive rather than technical.", "Rejected the colored, heavily formatted layout for the trend chart.", "Kept my own structure for the analysis instead of the AI’s table format."], "es": ["Evaluación del piloto de IPAP y recomendación de implementación", "Desafío de experiencia de la fuerza laboral | Redactor técnico, operaciones e ingeniería de centros de datos", "Descargar la versión de Word", "Contenido", "Introducción", "Abreviaturas", "Parte 1: Análisis de información contradictoria", "Matriz de confianza de la información (Entregable A)", "Preguntas de validación antes de publicar (Entregable B)", "Parte 2: Análisis de la entrevista con el SME (Entregable C)", "Parte 3: Arquitectura de la información (Entregable D)", "Centro de conocimiento de IPAP", "1. Descripción general de la arquitectura de la información", "2. Usuarios previstos", "3. Responsables del contenido", "4. Revisión y gobernanza", "5. Estrategia de mantenimiento", "Parte 4: Métricas", "Narrativa ejecutiva (Entregable E)", "Narrativa de operaciones (Entregable F)", "Recomendación de panel de control (Entregable G)", "Parte 5: Recomendación para la dirección (Entregable H)", "Parte 6: Registro de uso de IA (Entregable I)", "Este documento presenta mi evaluación del Programa de Automatización del Aprovisionamiento de Infraestructura (IPAP) a partir de la información proporcionada en el desafío. El objetivo es evaluar la información contradictoria e incompleta, identificar qué es confiable o requiere más validación, y organizar los hallazgos en documentación clara y útil. También abarca la arquitectura de la información, la gobernanza del contenido, la comunicación adaptada a cada audiencia, las métricas clave y una recomendación final sobre si el programa está listo para una implementación más amplia.", "Las siguientes abreviaturas se usan en todo este documento para referirse a programas, funciones, regiones y tecnologías clave.", "Tabla: Abreviaturas usadas en este documento. Dos columnas: abreviatura y forma completa. Doce filas, desde IPAP (Programa de Automatización del Aprovisionamiento de Infraestructura) hasta IA (inteligencia artificial).", "<strong>Abreviatura</strong>", "<strong>Forma completa</strong>", "IPAP", "Programa de Automatización del Aprovisionamiento de Infraestructura", "SME", "Experto en la materia", "NA", "Norteamérica", "EMEA", "Europa, Oriente Medio y África", "APAC", "Asia-Pacífico", "OS", "Sistema operativo", "RBAC", "Control de acceso basado en roles", "QA", "Control de calidad", "SRE", "Ingeniero de confiabilidad de sitios", "Percentil 90", "FAQ", "Pregunta frecuente", "IA", "Inteligencia artificial", "Cada afirmación se califica con los siguientes niveles de confianza:", "<strong>Alto:</strong> Confirmado por dos o más fuentes, o por los datos de métricas.", "<strong>Medio:</strong> Proviene de una fuente confiable, pero es aproximado, no tiene fecha o no está bien definido.", "<strong>Bajo:</strong> Contradicho por otra fuente, o un resultado limitado presentado como general.", "Tabla: Matriz de confianza de la información. Siete afirmaciones de las fuentes A, B y C, cada una con un nivel de confianza, si se debe publicar y si requiere validación. Las tres afirmaciones de la fuente A tienen calificación Baja y no se deben publicar.", "<strong>Afirmación</strong>", "<strong>Fuente</strong>", "<strong>Nivel de confianza</strong>", "<strong>¿Publicar?</strong>", "<strong>¿Requiere validación?</strong>", "La implementación global de IPAP se completó con éxito.", "Fuente A", "Bajo", "No", "Sí. La contradicen directamente la fuente C (la expansión a EMEA y APAC sigue en curso) y la fuente B (alrededor del 40 % de las solicitudes de APAC siguen siendo manuales).", "El tiempo de aprovisionamiento se redujo de 12 a 3 días en todas las regiones.", "Sí. La contradicen la fuente B (el promedio de APAC es de 6 días) y las métricas de la parte 4 (EMEA está en 4 días y APAC en 6). Solo NA llegó a 3 días.", "La adopción regional alcanzó el 95 %.", "Sí. La fuente C aclara que la adopción del 95 % se aplica solo a los equipos del piloto, no a regiones completas.", "APAC todavía requiere aprovisionamiento manual para alrededor del 40 % de las solicitudes debido a dependencias heredadas.", "Fuente B", "Medio", "Sí (solo para operaciones internas)", "Sí. Confirmar el porcentaje actual, los bloqueos específicos de los sistemas heredados y los plazos de corrección.", "El tiempo promedio de aprovisionamiento en APAC sigue siendo de 6 días.", "Alto", "Sí", "En parte. Lo confirman las métricas de la parte 4 (APAC en junio = 6 días). Confirmar si el promedio incluye solicitudes manuales (pregunta 9 del Entregable B).", "La adopción del 95 % se aplica solo a los equipos del piloto.", "Fuente C", "Sí, indicando el alcance", "Sí. Explica la diferencia entre la actualización ejecutiva y los datos operativos. Confirmar cómo se mide la adopción (pregunta 2 del Entregable B).", "La expansión a EMEA y APAC sigue en curso.", "No. Coincide con la fuente B y con las métricas, que muestran a EMEA y APAC por detrás de NA.", "Estas preguntas deben responderse antes de publicar cualquier afirmación sobre el estado, las métricas o las capacidades de IPAP.", "<strong>Alcance y definiciones</strong>", "¿Qué significa “implementación global completada” y qué regiones y equipos están activos hoy?", "¿Cómo se mide la adopción y en qué se basa el 95 %?", "¿Cómo se mide el tiempo de aprovisionamiento? ¿Incluye el tiempo de espera de la aprobación de seguridad?", "¿Cómo se define el retrabajo y cuál era la tasa de retrabajo antes de IPAP?", "<strong>Fuentes de datos</strong>", "¿De qué sistema provienen las cifras de aprovisionamiento y retrabajo, y quién es responsable de esos datos?", "¿Las cifras cubren solo a los equipos del piloto o todas las solicitudes de cada región?", "<strong>Información contradictoria</strong>", "¿“De 12 a 3 días” se refiere solo a Norteamérica, o se pensó como una cifra global?", "¿Sigue vigente la cifra del 40 % de aprovisionamiento manual en APAC?", "¿El promedio de 6 días de APAC incluye las solicitudes manuales?", "¿Algo además de IPAP, como el personal o el volumen de solicitudes, ayudó a reducir el tiempo de aprovisionamiento?", "<strong>Revisión y aprobación</strong>", "¿A qué fecha es exacta cada afirmación y cuándo se debe volver a comprobar?", "¿Quién es la audiencia y qué decisiones tomará con esta información?", "¿Algún contenido revela controles de seguridad o soluciones alternativas de aprobación que deban mantenerse restringidos?", "¿Quién aprueba este contenido antes de publicarlo y quién lo mantiene actualizado?", "<strong>Información faltante</strong>", "¿Qué flujos de aprovisionamiento están totalmente automatizados con Jenkins?", "¿Qué situaciones todavía requieren aprobación de seguridad manual?", "¿Qué significa “la compatibilidad con Windows aún no es totalmente estable”?", "¿La detección de desviaciones en Windows tiene soporte oficial para uso en producción?", "¿Qué trabajos de sincronización del inventario todavía se están ajustando?", "¿Cuál es el impacto operativo cuando la sincronización del inventario falla o se retrasa?", "<strong>Preguntas de seguimiento</strong>", "¿Qué condiciones activan una revisión de seguridad manual?", "¿Quién aprueba esas solicitudes y la aprobación afecta el tiempo de aprovisionamiento?", "¿Qué problemas específicos existen con la detección de desviaciones en Windows?", "¿Hay tasas de error o limitaciones conocidas para Windows?", "¿Con qué frecuencia se ejecutan los trabajos de sincronización del inventario?", "¿Qué pasa cuando falla la sincronización?", "¿Ya existen reintentos, monitoreo y alertas?", "¿Qué debe completarse para que estas funciones se consideren estables?", "<strong>Riesgos de documentación</strong>", "Evitar publicar lo siguiente como hechos confirmados hasta validarlo:", "“El aprovisionamiento está totalmente automatizado.”", "“Jenkins gestiona todos los flujos de aprovisionamiento.”", "“La detección de desviaciones en Windows tiene soporte completo.”", "“La sincronización del inventario es estable.”", "“No se requiere intervención manual.”", "Los criterios de aprobación de seguridad y las soluciones alternativas deben mantenerse restringidos, incluso después de validarse.", "Estado del programa", "Guía de inicio rápido", "Acceso e incorporación", "Descripción general de la arquitectura", "Linux", "Windows (la detección de desviaciones aún no es estable)", "Huella de infraestructura", "Canalizaciones automatizadas", "Anulaciones manuales y aprobaciones (restringido)", "Control de acceso y RBAC", "Gestión de secretos (restringido)", "Aprobaciones de seguridad (restringido)", "Auditoría de cumplimiento", "Controles de calidad", "Detección de desviaciones", "Auditoría del inventario", "Estado del aprovisionamiento", "Definiciones de métricas", "Limitaciones conocidas", "Solución de problemas", "Escalamiento y guardias", "Notas de la versión y registro de cambios", "Comentarios", "El centro de conocimiento de IPAP usa una estructura basada en tareas que sigue el orden en que trabajan los usuarios: primeros pasos, comprobación de la compatibilidad de plataformas, aprovisionamiento, seguridad, validación, monitoreo, operaciones y gobernanza. El estado del programa, las definiciones de métricas y la compatibilidad de plataformas se definen cada uno en un solo lugar, para que todos los equipos trabajen con la misma información. La guía operativa, las limitaciones y la información de versiones se mantienen separadas para que los usuarios encuentren la información según su función.", "Tabla: Usuarios previstos del centro de conocimiento de IPAP. Ocho secciones, cada una con sus usuarios principales y lo que buscan.", "<strong>Sección</strong>", "<strong>Usuarios principales</strong>", "<strong>Qué buscan</strong>", "Primeros pasos", "Nuevos solicitantes y aprobadores", "Acceso, incorporación y cómo funciona IPAP", "Compatibilidad de plataformas", "Ingenieros de infraestructura y de plataforma", "Qué es compatible, por OS y región", "Aprovisionamiento", "Ingenieros de infraestructura, operadores", "Cómo aprovisionar, incluidos los pasos manuales y de aprobación", "Seguridad y cumplimiento", "Seguridad, cumplimiento y aprobadores", "Control de acceso, aprobaciones y requisitos de auditoría", "Validación", "Operadores, QA", "Controles de calidad, detección de desviaciones, exactitud del inventario", "Monitoreo y observabilidad", "Gerentes de operaciones, SRE", "Estado del aprovisionamiento y definiciones de métricas", "Operaciones y soporte", "Ingenieros de soporte, equipos de guardia", "Limitaciones conocidas, solución de problemas, escalamiento", "Gobernanza y versiones", "Responsables del programa, redactores técnicos", "Notas de la versión, historial de cambios, responsables del contenido", "Cada sección tiene un único responsable, aunque varios equipos la revisen:", "<strong>SME de ingeniería:</strong> exactitud técnica y comportamiento de la plataforma", "<strong>SME de operaciones:</strong> procedimientos operativos, solución de problemas y contenido de escalamiento", "<strong>Equipos de seguridad y cumplimiento:</strong> controles de seguridad, aprobaciones y contenido de cumplimiento", "<strong>Redactores técnicos:</strong> estructura, coherencia, facilidad de uso y estándares de publicación", "<strong>Responsables del programa:</strong> estado del programa, métricas y aprobación final del negocio", "La frecuencia de revisión depende de la frecuencia con que cambia el contenido y del riesgo que conlleva un error.", "<strong>En cada versión, con la aprobación del SME:</strong> compatibilidad de plataformas, flujos de aprovisionamiento, procedimientos de validación", "<strong>Mensual:</strong> limitaciones conocidas, contactos de escalamiento, estado del programa", "<strong>Trimestral, o cuando cambian las políticas:</strong> procedimientos de seguridad y cumplimiento", "<strong>Trimestral:</strong> primeros pasos, FAQ, solución de problemas", "<strong>Antes de cualquier cambio:</strong> definiciones de métricas, que requieren la aprobación del responsable del programa", "Cada actualización registra su revisor y la fecha de aprobación en el registro de cambios, de modo que cada cambio se puede rastrear hasta la persona que lo aprobó.", "El centro de conocimiento se mantiene exacto porque cada página tiene un responsable, una fecha de revisión y un motivo claro para actualizarla.", "<strong>Responsables.</strong> Cada sección tiene un único responsable, según la sección 3, Responsables del contenido, de este documento.", "<strong>Revisiones programadas.</strong> El contenido se revisa según el calendario de la sección 4, Revisión y gobernanza, de este documento. Las páginas con la fecha de revisión vencida se marcan.", "<strong>Motivos de actualización.</strong> Un cambio en una canalización, plataforma o proceso no está completo hasta que se actualizan las páginas afectadas. Cada actualización se registra en el registro de cambios.", "<strong>Fuente única de verdad.</strong> El estado del programa, las definiciones de métricas y la compatibilidad de plataformas se definen cada uno en un solo lugar y se enlazan desde otras páginas, de modo que un cambio se hace una sola vez.", "<strong>Vencimiento y retiro.</strong> Cada limitación conocida tiene un responsable y una fecha objetivo. Las páginas desactualizadas se retiran o se combinan durante una auditoría trimestral del contenido.", "En esta sección se usan los siguientes datos del desafío.", "Tabla: Duración del aprovisionamiento y tasa de retrabajo por región. NA: 12, 8 y 3 días en enero, marzo y junio, con una tasa de retrabajo del 3 %. EMEA: 11, 7 y 4 días, con un 5 % de retrabajo. APAC: 13, 10 y 6 días, con un 9 % de retrabajo.", "<strong>Región</strong>", "<strong>Enero (días)</strong>", "<strong>Marzo (días)</strong>", "<strong>Junio (días)</strong>", "<strong>Tasa de retrabajo</strong>", "<strong>NA</strong>", "<strong>EMEA</strong>", "<strong>APAC</strong>", "<em>Figura 1: Duración promedio del aprovisionamiento por región, de enero a junio.</em>", "El piloto de IPAP redujo el tiempo de aprovisionamiento en las tres regiones. Entre enero y junio, el tiempo de aprovisionamiento bajó de 12 a 3 días en Norteamérica, de 11 a 4 días en EMEA y de 13 a 6 días en APAC. Un aprovisionamiento más rápido significa que los equipos obtienen antes la infraestructura que necesitan.", "Sin embargo, el programa no está listo para una implementación global:", "La expansión a EMEA y APAC sigue en curso.", "La cifra de adopción del 95 % se aplica solo a los equipos del piloto.", "El resultado de 3 días se aplica solo a Norteamérica.", "<strong>Riesgos clave</strong>", "Alrededor del 40 % de las solicitudes de APAC todavía requieren aprovisionamiento manual debido a dependencias heredadas. APAC también tiene la tasa de retrabajo más alta (9 %, frente al 3 % en Norteamérica).", "La detección de desviaciones en Windows aún no es estable.", "Las aprobaciones de seguridad y la sincronización del inventario todavía requieren trabajo manual.", "<strong>Preparación:</strong> IPAP está listo para una implementación gradual, región por región. No está listo para anunciarse como una implementación global.", "<strong>Decisiones que debe tomar la dirección</strong>", "Aprobar los criterios de preparación para cada región.", "Aprobar el financiamiento para eliminar las dependencias heredadas de APAC.", "Aprobar una actualización de estado corregida que reemplace la actualización ejecutiva anterior.", "<strong>Situación actual</strong>", "Jenkins ya gestiona el aprovisionamiento para los equipos del piloto, pero algunos pasos siguen siendo manuales:", "Aprobaciones de seguridad para solicitudes de excepción", "Solicitudes con dependencias heredadas, principalmente en APAC", "Dos limitaciones conocidas también afectan las operaciones diarias: la detección de desviaciones en Windows aún no es estable y los trabajos de sincronización del inventario todavía se están ajustando.", "<strong>Diferencias regionales</strong>", "Tabla: Diferencias regionales en junio. NA: 3 días, 3 % de retrabajo, puede usarse como referencia. EMEA: 4 días, 5 % de retrabajo, expansión en curso. APAC: 6 días, 9 % de retrabajo, expansión en curso, con alrededor del 40 % de las solicitudes todavía manuales.", "<strong>Tiempo de aprovisionamiento en junio</strong>", "<strong>Notas</strong>", "3 días", "La más cercana al estado objetivo. Puede usarse como referencia.", "4 días", "Expansión en curso. Documentar las brechas durante la incorporación.", "6 días", "Expansión en curso. Alrededor del 40 % de las solicitudes siguen siendo manuales.", "<strong>Qué deben hacer los equipos por ahora</strong>", "Revisar manualmente las desviaciones en los hosts de Windows.", "Confirmar los registros del inventario antes de enviar una solicitud de aprovisionamiento.", "Usar el flujo manual para las solicitudes con dependencias heredadas.", "<strong>Consideraciones sobre la adopción</strong>", "La cifra de adopción del 95 % cubre solo a los equipos del piloto. Antes de incorporar nuevos equipos, la adopción debe definirse como el porcentaje de solicitudes completadas sin pasos manuales, y cada región debe tener una línea base.", "<strong>Oportunidades de mejora</strong>", "Crear un plan para eliminar o sortear cada dependencia heredada de APAC.", "Hacer seguimiento del retrabajo por causa raíz.", "Definir cuándo se considera estable la detección de desviaciones en Windows.", "Medir cuántas solicitudes necesitan aprobación de seguridad manual y cuánto esperan.", "Informar la mediana y el P90 del tiempo de aprovisionamiento por separado para solicitudes automatizadas y manuales.", "Un panel de control mensual para la dirección muestra si IPAP funciona, si es seguro ampliarlo y qué requiere una decisión. Cada métrica aparece por región, con su tendencia en el tiempo, e indica su definición, fuente de datos, responsable y fecha de la última actualización.<br/> <br/> La siguiente figura muestra el tiempo promedio de aprovisionamiento de cada región de enero a junio. El tiempo de aprovisionamiento bajó en las tres regiones, pero solo Norteamérica llegó a 3 días.<br/> <br/>", "Descripción en texto del gráfico", "Gráfico de líneas de la duración promedio del aprovisionamiento por región, de enero a junio. Las tres regiones mejoraron. NA bajó de 12 a 8 y luego a 3 días. EMEA bajó de 11 a 7 y luego a 4 días. APAC bajó de 13 a 10 y luego a 6 días. Solo NA llegó a 3 días.", "Tabla: Métricas recomendadas para el panel de control. Ocho métricas, cada una con lo que registra y por qué importa: avance de la implementación, tasa de automatización, tiempo de aprovisionamiento, tasa de retrabajo, aprobaciones de seguridad manuales, cobertura de la detección de desviaciones, exactitud del inventario y estado de preparación.", "<strong>Métrica</strong>", "<strong>Qué registra</strong>", "<strong>Por qué importa</strong>", "Avance de la implementación", "Regiones y equipos activos, en comparación con el plan", "Muestra el avance real en lugar de afirmaciones generales", "Tasa de automatización", "Solicitudes completadas sin pasos manuales", "Muestra cuántos equipos usan realmente IPAP", "Tiempo de aprovisionamiento", "Mediana y P90 en días, para solicitudes automatizadas y manuales", "Muestra qué tan rápido es el aprovisionamiento, incluidas las demoras largas", "Tasa de retrabajo", "Solicitudes que se deben corregir", "Muestra si un aprovisionamiento más rápido afecta la calidad", "Aprobaciones de seguridad manuales", "Cantidad de aprobaciones y cuánto tardan", "Muestra si las aprobaciones causan demoras", "Cobertura de la detección de desviaciones", "Hosts cubiertos, por OS", "Muestra brechas de cumplimiento, como Windows", "Exactitud del inventario", "Registros que coinciden y cuánto tarda la sincronización", "Muestra si la automatización usa datos correctos", "Estado de preparación", "Listo, en curso o no listo, para cada región", "Muestra qué regiones pueden avanzar", "<strong>¿Está listo el programa para una implementación más amplia?</strong>", "Sí, para una implementación gradual, una región a la vez. No, para anunciar una implementación global. Norteamérica es la región de referencia. APAC pasa a la implementación completa solo cuando exista un plan para sus dependencias heredadas.", "<strong>Hechos</strong>", "Las fuentes y los datos de métricas indican lo siguiente:", "El tiempo de aprovisionamiento bajó en todas las regiones de enero a junio: NA de 12 a 3 días, EMEA de 11 a 4 días y APAC de 13 a 6 días.", "La adopción del 95 % se aplica solo a los equipos del piloto.", "Las tasas de retrabajo son del 3 % en NA, el 5 % en EMEA y el 9 % en APAC.", "Algunas aprobaciones de seguridad siguen siendo manuales.", "<strong>Supuestos</strong>", "Las siguientes afirmaciones son mis supuestos, pero no están confirmadas:", "Los tiempos de aprovisionamiento son promedios de todas las solicitudes de cada región.", "IPAP es la razón principal de la mejora, no los cambios en el personal o en el volumen de solicitudes.", "Alrededor del 40 % de las solicitudes de APAC siguen siendo manuales.", "La mayor tasa de retrabajo en APAC se debe al aprovisionamiento manual o a las dependencias heredadas.", "<strong>Riesgos y preocupaciones pendientes</strong>", "<strong>Credibilidad:</strong> La actualización ejecutiva anterior puede haber influido ya en algunas decisiones.", "<strong>Escalabilidad:</strong> El trabajo manual y el retrabajo en APAC pueden aumentar a medida que crece el volumen de solicitudes.", "<strong>Cumplimiento:</strong> Los hosts de Windows no tienen una detección de desviaciones estable.", "<strong>Calidad de los datos:</strong> El aprovisionamiento puede depender de registros de inventario desactualizados.", "<strong>Información que se debe validar antes de publicar</strong>", "Estado de la implementación y fechas de cada región", "Cómo se miden la adopción y el tiempo de aprovisionamiento", "Si las cifras cubren solo a los equipos del piloto", "El porcentaje actual de solicitudes manuales en APAC", "Estado de compatibilidad de Windows y Linux", "<strong>Recomendaciones</strong>", "Antes de avanzar, la dirección necesita:", "Publicar una actualización de estado corregida y con fechas.", "Aprobar definiciones estándar para la adopción, el tiempo de aprovisionamiento y el retrabajo.", "Acordar criterios de preparación para cada región, como una tasa de automatización objetivo y una tasa de retrabajo máxima.", "Financiar un plan para eliminar o sortear las dependencias heredadas de APAC.", "Definir cuándo la detección de desviaciones en Windows es estable.", "Lanzar el centro de conocimiento de IPAP, con responsables designados, antes de que la próxima región entre en funcionamiento.", "Usé Claude (Anthropic) durante este desafío. El contenido final, las calificaciones y las recomendaciones son decisiones mías.", "Sección 1: Instrucciones utilizadas", "Compartí mi propio borrador y le pedí que modificara algunas secciones para mantener la coherencia.", "Pedí comentarios sobre secciones específicas, como la estrategia de mantenimiento y la arquitectura de la información, y que reescribiera las preguntas de validación con mi estilo.", "Le pedí que incluyera un diagrama de las tendencias del tiempo de aprovisionamiento.", "Crear una página web local para publicar este documento.", "Crear una opción multilingüe (5 idiomas) con un menú desplegable para que personas de distintas regiones puedan leer este documento en el idioma que prefieran.", "Sección 2: Resultados aceptados", "Sugerencias para que la descripción general de la arquitectura de la información, los usuarios previstos, los ciclos de revisión y la estrategia de mantenimiento fueran más específicos.", "El gráfico de tendencia del tiempo de aprovisionamiento.", "El archivo index.html para ver el documento como página web. (Lo compartiré en nuestra reunión de hoy)", "Sección 3: Resultados rechazados o modificados", "Rechacé algunos borradores porque el tono era persuasivo en lugar de técnico.", "Rechacé el diseño con colores y mucho formato para el gráfico de tendencia.", "Mantuve mi propia estructura para el análisis en lugar del formato de tabla de la IA."], "fr": ["Évaluation du pilote IPAP et recommandation de déploiement", "Défi Expérience des collaborateurs | Rédacteur technique, exploitation et ingénierie des centres de données", "Télécharger la version Word", "Sommaire", "Introduction", "Abréviations", "Partie 1 : Analyse des informations contradictoires", "Matrice de confiance des informations (Livrable A)", "Questions de validation avant publication (Livrable B)", "Partie 2 : Analyse de l’entretien avec le SME (Livrable C)", "Partie 3 : Architecture de l’information (Livrable D)", "Centre de connaissances IPAP", "1. Vue d’ensemble de l’architecture de l’information", "2. Utilisateurs visés", "3. Responsabilité du contenu", "4. Revue et gouvernance", "5. Stratégie de maintenance", "Partie 4 : Indicateurs", "Récit pour la direction (Livrable E)", "Récit pour les opérations (Livrable F)", "Recommandation de tableau de bord (Livrable G)", "Partie 5 : Recommandation à la direction (Livrable H)", "Partie 6 : Registre d’utilisation de l’IA (Livrable I)", "Ce document présente mon évaluation du programme d’automatisation du provisionnement de l’infrastructure (IPAP), à partir des informations fournies dans le défi. L’objectif est d’évaluer les informations contradictoires et incomplètes, d’identifier ce qui est fiable ou doit encore être validé, et d’organiser les constats en une documentation claire et utilisable. Il couvre aussi l’architecture de l’information, la gouvernance du contenu, la communication adaptée à chaque public, les indicateurs clés et une recommandation finale sur la capacité du programme à être déployé plus largement.", "Les abréviations suivantes sont utilisées dans tout le document pour désigner les principaux programmes, rôles, régions et technologies.", "Tableau : Abréviations utilisées dans ce document. Deux colonnes : abréviation et forme complète. Douze lignes, d’IPAP (programme d’automatisation du provisionnement de l’infrastructure) à IA (intelligence artificielle).", "<strong>Abréviation</strong>", "<strong>Forme complète</strong>", "IPAP", "Programme d’automatisation du provisionnement de l’infrastructure", "SME", "Expert métier", "NA", "Amérique du Nord", "EMEA", "Europe, Moyen-Orient et Afrique", "APAC", "Asie-Pacifique", "OS", "Système d’exploitation", "RBAC", "Contrôle d’accès basé sur les rôles", "QA", "Assurance qualité", "SRE", "Ingénieur en fiabilité des sites", "90e centile", "FAQ", "Question fréquente", "IA", "Intelligence artificielle", "Chaque affirmation est évaluée selon les niveaux de confiance suivants :", "<strong>Élevé :</strong> Confirmé par au moins deux sources ou par les données des indicateurs.", "<strong>Moyen :</strong> Provient d’une source fiable, mais est approximatif, non daté ou mal défini.", "<strong>Faible :</strong> Contredit par une autre source, ou résultat limité présenté comme général.", "Tableau : Matrice de confiance des informations. Sept affirmations issues des sources A, B et C, chacune avec un niveau de confiance, la décision de publier ou non et le besoin de validation. Les trois affirmations de la source A sont évaluées Faible et ne doivent pas être publiées.", "<strong>Affirmation</strong>", "<strong>Source</strong>", "<strong>Niveau de confiance</strong>", "<strong>Publier ?</strong>", "<strong>Validation requise ?</strong>", "Le déploiement mondial d’IPAP est terminé avec succès.", "Source A", "Faible", "Non", "Oui. Directement contredit par la source C (l’extension à l’EMEA et à l’APAC est toujours en cours) et par la source B (environ 40 % des demandes APAC restent manuelles).", "Le délai de provisionnement est passé de 12 à 3 jours dans toutes les régions.", "Oui. Contredit par la source B (la moyenne APAC est de 6 jours) et par les indicateurs de la partie 4 (EMEA à 4 jours, APAC à 6 jours). Seule NA a atteint 3 jours.", "L’adoption régionale a atteint 95 %.", "Oui. La source C précise que l’adoption de 95 % concerne uniquement les équipes du pilote, et non des régions entières.", "L’APAC exige encore un provisionnement manuel pour environ 40 % des demandes en raison de dépendances héritées.", "Source B", "Moyen", "Oui (exploitation interne uniquement)", "Oui. Confirmer le pourcentage actuel, les blocages précis liés aux systèmes hérités et les délais de correction.", "Le délai moyen de provisionnement en APAC reste de 6 jours.", "Élevé", "Oui", "En partie. Confirmé par les indicateurs de la partie 4 (APAC en juin = 6 jours). Vérifier si la moyenne inclut les demandes manuelles (question 9 du livrable B).", "L’adoption de 95 % concerne uniquement les équipes du pilote.", "Source C", "Oui, en précisant le périmètre", "Oui. Explique l’écart entre la mise à jour pour la direction et les données opérationnelles. Vérifier comment l’adoption est mesurée (question 2 du livrable B).", "L’extension à l’EMEA et à l’APAC est toujours en cours.", "Non. Cohérent avec la source B et avec les indicateurs, qui montrent l’EMEA et l’APAC derrière NA.", "Ces questions doivent recevoir une réponse avant toute publication d’une affirmation sur le statut, les indicateurs ou les capacités d’IPAP.", "<strong>Périmètre et définitions</strong>", "Que signifie « déploiement mondial terminé », et quelles régions et équipes sont actives aujourd’hui ?", "Comment l’adoption est-elle mesurée, et sur quoi repose le chiffre de 95 % ?", "Comment le délai de provisionnement est-il mesuré, et inclut-il le temps d’attente de l’approbation de sécurité ?", "Comment la reprise est-elle définie, et quel était le taux de reprise avant IPAP ?", "<strong>Sources de données</strong>", "De quel système proviennent les chiffres de provisionnement et de reprise, et qui est responsable de ces données ?", "Les chiffres couvrent-ils uniquement les équipes du pilote, ou toutes les demandes de chaque région ?", "<strong>Informations contradictoires</strong>", "« De 12 à 3 jours » concerne-t-il uniquement l’Amérique du Nord, ou s’agissait-il d’un chiffre mondial ?", "Le chiffre de 40 % de provisionnement manuel en APAC est-il toujours d’actualité ?", "La moyenne de 6 jours en APAC inclut-elle les demandes manuelles ?", "Un autre facteur qu’IPAP, comme les effectifs ou le volume de demandes, a-t-il contribué à réduire le délai de provisionnement ?", "<strong>Revue et approbation</strong>", "À quelle date chaque affirmation est-elle exacte, et quand faut-il la vérifier à nouveau ?", "Qui est le public visé, et quelles décisions prendra-t-il à partir de ces informations ?", "Un contenu révèle-t-il des contrôles de sécurité ou des contournements d’approbation qui doivent rester restreints ?", "Qui approuve ce contenu avant sa publication, et qui le tient à jour ?", "<strong>Informations manquantes</strong>", "Quels flux de provisionnement sont entièrement automatisés avec Jenkins ?", "Quelles situations exigent encore une approbation de sécurité manuelle ?", "Que signifie « la prise en charge de Windows n’est pas encore totalement stable » ?", "La détection des dérives sous Windows est-elle officiellement prise en charge en production ?", "Quelles tâches de synchronisation de l’inventaire sont encore en cours d’ajustement ?", "Quel est l’impact opérationnel lorsque la synchronisation de l’inventaire échoue ou est retardée ?", "<strong>Questions de suivi</strong>", "Quelles conditions déclenchent une revue de sécurité manuelle ?", "Qui approuve ces demandes, et l’approbation a-t-elle un effet sur le délai de provisionnement ?", "Quels problèmes précis existent avec la détection des dérives sous Windows ?", "Existe-t-il des taux d’échec ou des limitations connus pour Windows ?", "À quelle fréquence les tâches de synchronisation de l’inventaire s’exécutent-elles ?", "Que se passe-t-il en cas d’échec de la synchronisation ?", "Des nouvelles tentatives, une surveillance et des alertes sont-elles déjà en place ?", "Que faut-il terminer pour que ces fonctionnalités soient considérées comme stables ?", "<strong>Risques documentaires</strong>", "Éviter de publier les affirmations suivantes comme des faits confirmés avant leur validation :", "« Le provisionnement est entièrement automatisé. »", "« Jenkins gère tous les flux de provisionnement. »", "« La détection des dérives sous Windows est entièrement prise en charge. »", "« La synchronisation de l’inventaire est stable. »", "« Aucune intervention manuelle n’est nécessaire. »", "Les critères d’approbation de sécurité et les contournements doivent rester restreints, même après leur validation.", "Statut du programme", "Guide de démarrage rapide", "Accès et intégration", "Vue d’ensemble de l’architecture", "Linux", "Windows (détection des dérives pas encore stable)", "Empreinte de l’infrastructure", "Pipelines automatisés", "Contournements manuels et approbations (restreint)", "Contrôle d’accès et RBAC", "Gestion des secrets (restreint)", "Approbations de sécurité (restreint)", "Audit de conformité", "Contrôles qualité", "Détection des dérives", "Audit de l’inventaire", "Statut du provisionnement", "Définitions des indicateurs", "Limitations connues", "Dépannage", "Escalade et astreinte", "Notes de version et journal des modifications", "Commentaires", "Le centre de connaissances IPAP utilise une structure orientée tâches qui suit l’ordre de travail des utilisateurs : prise en main, vérification des plateformes prises en charge, provisionnement, sécurité, validation, surveillance, exploitation et gouvernance. Le statut du programme, les définitions des indicateurs et les plateformes prises en charge sont chacun définis à un seul endroit, pour que toutes les équipes travaillent avec les mêmes informations. Les consignes opérationnelles, les limitations et les informations de version sont séparées pour que chacun trouve l’information selon son rôle.", "Tableau : Utilisateurs visés du centre de connaissances IPAP. Huit sections, chacune avec ses utilisateurs principaux et ce qu’ils viennent y chercher.", "<strong>Section</strong>", "<strong>Utilisateurs principaux</strong>", "<strong>Ce qu’ils viennent chercher</strong>", "Prise en main", "Nouveaux demandeurs et approbateurs", "Accès, intégration et fonctionnement d’IPAP", "Plateformes prises en charge", "Ingénieurs infrastructure et plateforme", "Ce qui est pris en charge, par OS et par région", "Provisionnement", "Ingénieurs infrastructure, opérateurs", "Comment provisionner, y compris les étapes manuelles et d’approbation", "Sécurité et conformité", "Sécurité, conformité et approbateurs", "Contrôle d’accès, approbations et exigences d’audit", "Validation", "Opérateurs, QA", "Contrôles qualité, détection des dérives, exactitude de l’inventaire", "Surveillance et observabilité", "Responsables des opérations, SRE", "Statut du provisionnement et définitions des indicateurs", "Exploitation et support", "Ingénieurs support, équipes d’astreinte", "Limitations connues, dépannage, escalade", "Gouvernance et versions", "Responsables du programme, rédacteurs techniques", "Notes de version, historique des modifications, responsabilité du contenu", "Chaque section a un seul responsable, même lorsque plusieurs équipes la relisent :", "<strong>SME ingénierie :</strong> exactitude technique et comportement de la plateforme", "<strong>SME exploitation :</strong> procédures opérationnelles, dépannage et contenu d’escalade", "<strong>Équipes sécurité et conformité :</strong> contrôles de sécurité, approbations et contenu de conformité", "<strong>Rédacteurs techniques :</strong> structure, cohérence, facilité d’utilisation et normes de publication", "<strong>Responsables du programme :</strong> statut du programme, indicateurs et approbation métier finale", "La fréquence de revue dépend de la fréquence des changements du contenu et du risque lié à une erreur.", "<strong>À chaque version, avec validation du SME :</strong> plateformes prises en charge, flux de provisionnement, procédures de validation", "<strong>Chaque mois :</strong> limitations connues, contacts d’escalade, statut du programme", "<strong>Chaque trimestre, ou en cas de changement de politique :</strong> procédures de sécurité et de conformité", "<strong>Chaque trimestre :</strong> prise en main, FAQ, dépannage", "<strong>Avant toute modification :</strong> définitions des indicateurs, qui nécessitent l’approbation du responsable du programme", "Chaque mise à jour consigne son relecteur et sa date d’approbation dans le journal des modifications, afin que chaque changement puisse être rattaché à la personne qui l’a approuvé.", "Le centre de connaissances reste exact parce que chaque page a un responsable, une date de revue et un déclencheur clair de mise à jour.", "<strong>Responsabilité.</strong> Chaque section a un seul responsable, comme indiqué à la section 3, Responsabilité du contenu, de ce document.", "<strong>Revues planifiées.</strong> Le contenu est revu selon le calendrier de la section 4, Revue et gouvernance, de ce document. Les pages dont la date de revue est dépassée sont signalées.", "<strong>Déclencheurs de mise à jour.</strong> Une modification d’un pipeline, d’une plateforme ou d’un processus n’est pas terminée tant que les pages concernées ne sont pas mises à jour. Chaque mise à jour est consignée dans le journal des modifications.", "<strong>Source unique de vérité.</strong> Le statut du programme, les définitions des indicateurs et les plateformes prises en charge sont chacun définis à un seul endroit et liés depuis les autres pages, de sorte qu’une modification n’est faite qu’une fois.", "<strong>Expiration et retrait.</strong> Chaque limitation connue a un responsable et une date cible. Les pages obsolètes sont retirées ou fusionnées lors d’un audit trimestriel du contenu.", "Les données suivantes du défi sont utilisées dans cette section.", "Tableau : Délai de provisionnement et taux de reprise par région. NA : 12, 8 et 3 jours en janvier, mars et juin, avec un taux de reprise de 3 %. EMEA : 11, 7 et 4 jours, avec 5 % de reprise. APAC : 13, 10 et 6 jours, avec 9 % de reprise.", "<strong>Région</strong>", "<strong>Janvier (jours)</strong>", "<strong>Mars (jours)</strong>", "<strong>Juin (jours)</strong>", "<strong>Taux de reprise</strong>", "<strong>NA</strong>", "<strong>EMEA</strong>", "<strong>APAC</strong>", "<em>Figure 1 : Délai moyen de provisionnement par région, de janvier à juin.</em>", "Le pilote IPAP a réduit le délai de provisionnement dans les trois régions. Entre janvier et juin, il est passé de 12 à 3 jours en Amérique du Nord, de 11 à 4 jours en EMEA et de 13 à 6 jours en APAC. Un provisionnement plus rapide permet aux équipes d’obtenir plus tôt l’infrastructure dont elles ont besoin.", "Cependant, le programme n’est pas prêt pour un déploiement mondial :", "L’extension à l’EMEA et à l’APAC est toujours en cours.", "Le chiffre d’adoption de 95 % concerne uniquement les équipes du pilote.", "Le résultat de 3 jours concerne uniquement l’Amérique du Nord.", "<strong>Principaux risques</strong>", "Environ 40 % des demandes APAC exigent encore un provisionnement manuel en raison de dépendances héritées. L’APAC a aussi le taux de reprise le plus élevé (9 %, contre 3 % en Amérique du Nord).", "La détection des dérives sous Windows n’est pas encore stable.", "Les approbations de sécurité et la synchronisation de l’inventaire exigent encore un travail manuel.", "<strong>Niveau de préparation :</strong> IPAP est prêt pour un déploiement progressif, région par région. Il n’est pas prêt à être annoncé comme un déploiement mondial.", "<strong>Décisions attendues de la direction</strong>", "Approuver les critères de préparation pour chaque région.", "Approuver le financement pour supprimer les dépendances héritées en APAC.", "Approuver une mise à jour de statut corrigée pour remplacer la mise à jour précédente adressée à la direction.", "<strong>Situation actuelle</strong>", "Jenkins gère désormais le provisionnement pour les équipes du pilote, mais certaines étapes restent manuelles :", "Approbations de sécurité pour les demandes d’exception", "Demandes avec des dépendances héritées, principalement en APAC", "Deux limitations connues affectent aussi l’exploitation quotidienne : la détection des dérives sous Windows n’est pas encore stable, et les tâches de synchronisation de l’inventaire sont encore en cours d’ajustement.", "<strong>Différences régionales</strong>", "Tableau : Différences régionales en juin. NA : 3 jours, 3 % de reprise, peut servir de référence. EMEA : 4 jours, 5 % de reprise, extension en cours. APAC : 6 jours, 9 % de reprise, extension en cours, avec environ 40 % des demandes encore manuelles.", "<strong>Délai de provisionnement en juin</strong>", "<strong>Remarques</strong>", "3 jours", "La plus proche de l’état cible. Peut servir de référence.", "4 jours", "Extension en cours. Documenter les écarts pendant l’intégration.", "6 jours", "Extension en cours. Environ 40 % des demandes restent manuelles.", "<strong>Ce que les équipes doivent faire pour l’instant</strong>", "Vérifier manuellement les dérives sur les hôtes Windows.", "Confirmer les enregistrements de l’inventaire avant de soumettre une demande de provisionnement.", "Utiliser le flux manuel pour les demandes avec des dépendances héritées.", "<strong>Points d’attention sur l’adoption</strong>", "Le chiffre d’adoption de 95 % couvre uniquement les équipes du pilote. Avant d’intégrer de nouvelles équipes, l’adoption doit être définie comme le pourcentage de demandes traitées sans étape manuelle, et chaque région doit disposer d’une référence de départ.", "<strong>Pistes d’amélioration</strong>", "Établir un plan pour supprimer ou contourner chaque dépendance héritée en APAC.", "Suivre la reprise par cause racine.", "Définir à quel moment la détection des dérives sous Windows est considérée comme stable.", "Mesurer combien de demandes nécessitent une approbation de sécurité manuelle et combien de temps elles attendent.", "Indiquer la médiane et le P90 du délai de provisionnement séparément pour les demandes automatisées et manuelles.", "Un tableau de bord mensuel pour la direction montre si IPAP fonctionne, s’il est sûr de l’étendre et ce qui nécessite une décision. Chaque indicateur apparaît par région, avec son évolution dans le temps, et indique sa définition, sa source de données, son responsable et la date de sa dernière mise à jour.<br/> <br/> La figure suivante montre le délai moyen de provisionnement de chaque région de janvier à juin. Le délai a baissé dans les trois régions, mais seule l’Amérique du Nord a atteint 3 jours.<br/> <br/>", "Description textuelle du graphique", "Graphique linéaire du délai moyen de provisionnement par région, de janvier à juin. Les trois régions se sont améliorées. NA est passée de 12 à 8 puis à 3 jours. EMEA est passée de 11 à 7 puis à 4 jours. APAC est passée de 13 à 10 puis à 6 jours. Seule NA a atteint 3 jours.", "Tableau : Indicateurs recommandés pour le tableau de bord. Huit indicateurs, chacun avec ce qu’il suit et pourquoi il compte : avancement du déploiement, taux d’automatisation, délai de provisionnement, taux de reprise, approbations de sécurité manuelles, couverture de la détection des dérives, exactitude de l’inventaire et état de préparation.", "<strong>Indicateur</strong>", "<strong>Ce qu’il suit</strong>", "<strong>Pourquoi il compte</strong>", "Avancement du déploiement", "Régions et équipes actives, par rapport au plan", "Montre l’avancement réel plutôt que des affirmations générales", "Taux d’automatisation", "Demandes traitées sans étape manuelle", "Montre combien d’équipes utilisent réellement IPAP", "Délai de provisionnement", "Médiane et P90 en jours, pour les demandes automatisées et manuelles", "Montre la rapidité du provisionnement, y compris les longs retards", "Taux de reprise", "Demandes à corriger", "Montre si un provisionnement plus rapide nuit à la qualité", "Approbations de sécurité manuelles", "Nombre d’approbations et leur durée", "Montre si les approbations causent des retards", "Couverture de la détection des dérives", "Hôtes couverts, par OS", "Montre les lacunes de conformité, comme Windows", "Exactitude de l’inventaire", "Enregistrements concordants et durée de la synchronisation", "Montre si l’automatisation utilise des données correctes", "État de préparation", "Prêt, en cours ou non prêt, pour chaque région", "Montre quelles régions peuvent avancer", "<strong>Le programme est-il prêt pour un déploiement plus large ?</strong>", "Oui, pour un déploiement progressif, une région à la fois. Non, pour une annonce de déploiement mondial. L’Amérique du Nord est la région de référence. L’APAC passe au déploiement complet seulement lorsqu’un plan existe pour ses dépendances héritées.", "<strong>Faits</strong>", "Les sources et les données des indicateurs indiquent ce qui suit :", "Le délai de provisionnement a baissé dans toutes les régions de janvier à juin : NA de 12 à 3 jours, EMEA de 11 à 4 jours et APAC de 13 à 6 jours.", "L’adoption de 95 % concerne uniquement les équipes du pilote.", "Les taux de reprise sont de 3 % en NA, 5 % en EMEA et 9 % en APAC.", "Certaines approbations de sécurité restent manuelles.", "<strong>Hypothèses</strong>", "Les affirmations suivantes sont mes hypothèses, mais elles ne sont pas confirmées :", "Les délais de provisionnement sont des moyennes de toutes les demandes de chaque région.", "IPAP est la principale raison de l’amélioration, et non des changements d’effectifs ou de volume de demandes.", "Environ 40 % des demandes APAC restent manuelles.", "Le taux de reprise plus élevé en APAC est dû au provisionnement manuel ou aux dépendances héritées.", "<strong>Risques et préoccupations restantes</strong>", "<strong>Crédibilité :</strong> La mise à jour précédente adressée à la direction a peut-être déjà influencé des décisions.", "<strong>Montée en charge :</strong> Le travail manuel et la reprise en APAC peuvent augmenter avec le volume de demandes.", "<strong>Conformité :</strong> Les hôtes Windows n’ont pas de détection des dérives stable.", "<strong>Qualité des données :</strong> Le provisionnement peut reposer sur des enregistrements d’inventaire obsolètes.", "<strong>Informations à valider avant publication</strong>", "Statut du déploiement et dates pour chaque région", "Comment l’adoption et le délai de provisionnement sont mesurés", "Si les chiffres couvrent uniquement les équipes du pilote", "Le pourcentage actuel de demandes manuelles en APAC", "État de la prise en charge de Windows et de Linux", "<strong>Recommandations</strong>", "Avant d’aller plus loin, la direction doit :", "Publier une mise à jour de statut corrigée et datée.", "Approuver des définitions standard pour l’adoption, le délai de provisionnement et la reprise.", "Convenir de critères de préparation pour chaque région, par exemple un taux d’automatisation cible et un taux de reprise maximal.", "Financer un plan pour supprimer ou contourner les dépendances héritées en APAC.", "Définir quand la détection des dérives sous Windows est stable.", "Lancer le centre de connaissances IPAP, avec des responsables désignés, avant la mise en service de la prochaine région.", "J’ai utilisé Claude (Anthropic) pendant ce défi. Le contenu final, les évaluations et les recommandations relèvent de mes décisions.", "Section 1 : Requêtes utilisées", "J’ai partagé mon propre brouillon et lui ai demandé de modifier quelques sections pour assurer la cohérence.", "J’ai demandé des commentaires sur des sections précises, comme la stratégie de maintenance et l’architecture de l’information, et la réécriture des questions de validation dans mon style.", "Je lui ai demandé d’inclure un diagramme sur l’évolution du délai de provisionnement.", "Créer une page web locale pour publier ce document.", "Créer une option multilingue (5 langues) avec un menu déroulant, pour que les personnes de différentes régions puissent lire ce document dans la langue de leur choix.", "Section 2 : Résultats acceptés", "Des suggestions pour rendre plus précises la vue d’ensemble de l’architecture de l’information, les utilisateurs visés, les cycles de revue et la stratégie de maintenance.", "Le graphique d’évolution du délai de provisionnement.", "Le fichier index.html pour consulter le document sous forme de page web. (Je le partagerai lors de notre réunion d’aujourd’hui)", "Section 3 : Résultats rejetés ou modifiés", "J’ai rejeté quelques brouillons, car le ton était persuasif plutôt que technique.", "J’ai rejeté la mise en page colorée et très formatée du graphique d’évolution.", "J’ai conservé ma propre structure pour l’analyse plutôt que le format en tableau de l’IA."], "hi": ["IPAP पायलट आकलन और रोलआउट सुझाव", "वर्कफ़ोर्स एक्सपीरियंस चैलेंज | तकनीकी लेखक, डेटा सेंटर संचालन और इंजीनियरिंग", "Word संस्करण डाउनलोड करें", "विषय-सूची", "परिचय", "संक्षिप्त रूप", "भाग 1: विरोधाभासी जानकारी का विश्लेषण", "सूचना विश्वसनीयता मैट्रिक्स (डिलिवरेबल A)", "प्रकाशन से पहले सत्यापन के प्रश्न (डिलिवरेबल B)", "भाग 2: SME साक्षात्कार का विश्लेषण (डिलिवरेबल C)", "भाग 3: सूचना संरचना (डिलिवरेबल D)", "IPAP नॉलेज सेंटर", "1. सूचना संरचना का अवलोकन", "2. लक्षित उपयोगकर्ता", "3. सामग्री का स्वामित्व", "4. समीक्षा और गवर्नेंस", "5. रखरखाव रणनीति", "भाग 4: मेट्रिक्स", "कार्यकारी सारांश (डिलिवरेबल E)", "संचालन सारांश (डिलिवरेबल F)", "डैशबोर्ड सुझाव (डिलिवरेबल G)", "भाग 5: नेतृत्व के लिए सुझाव (डिलिवरेबल H)", "भाग 6: AI उपयोग रिकॉर्ड (डिलिवरेबल I)", "यह दस्तावेज़ चैलेंज में दी गई जानकारी के आधार पर इन्फ्रास्ट्रक्चर प्रोविज़निंग ऑटोमेशन प्रोग्राम (IPAP) का मेरा आकलन प्रस्तुत करता है। इसका लक्ष्य विरोधाभासी और अधूरी जानकारी का मूल्यांकन करना, यह पहचानना कि किस पर भरोसा किया जा सकता है या किसे और सत्यापन की ज़रूरत है, और निष्कर्षों को स्पष्ट और उपयोगी दस्तावेज़ों में व्यवस्थित करना है। इसमें सूचना संरचना, सामग्री गवर्नेंस, दर्शकों के अनुसार संचार, मुख्य मेट्रिक्स, और व्यापक रोलआउट के लिए कार्यक्रम की तैयारी पर अंतिम सुझाव भी शामिल है।", "इस दस्तावेज़ में मुख्य कार्यक्रमों, भूमिकाओं, क्षेत्रों और तकनीकों के लिए नीचे दिए गए संक्षिप्त रूपों का उपयोग किया गया है।", "तालिका: इस दस्तावेज़ में उपयोग किए गए संक्षिप्त रूप। दो कॉलम: संक्षिप्त रूप और पूरा रूप। बारह पंक्तियाँ, IPAP (इन्फ्रास्ट्रक्चर प्रोविज़निंग ऑटोमेशन प्रोग्राम) से AI (आर्टिफ़िशियल इंटेलिजेंस) तक।", "<strong>संक्षिप्त रूप</strong>", "<strong>पूरा रूप</strong>", "IPAP", "इन्फ्रास्ट्रक्चर प्रोविज़निंग ऑटोमेशन प्रोग्राम", "SME", "विषय विशेषज्ञ", "NA", "उत्तरी अमेरिका", "EMEA", "यूरोप, मध्य पूर्व और अफ़्रीका", "APAC", "एशिया-प्रशांत", "OS", "ऑपरेटिंग सिस्टम", "RBAC", "भूमिका-आधारित एक्सेस नियंत्रण", "QA", "गुणवत्ता आश्वासन", "SRE", "साइट विश्वसनीयता इंजीनियर", "90वाँ पर्सेंटाइल", "FAQ", "अक्सर पूछा जाने वाला प्रश्न", "AI", "आर्टिफ़िशियल इंटेलिजेंस", "हर कथन को नीचे दिए गए विश्वसनीयता स्तरों के अनुसार रेट किया गया है:", "<strong>उच्च:</strong> दो या अधिक स्रोतों से, या मेट्रिक्स डेटा से पुष्टि हुई है।", "<strong>मध्यम:</strong> एक भरोसेमंद स्रोत से आया है, लेकिन अनुमानित है, उसकी तारीख नहीं है, या वह पूरी तरह परिभाषित नहीं है।", "<strong>निम्न:</strong> किसी दूसरे स्रोत से खंडन होता है, या सीमित परिणाम को सामान्य परिणाम की तरह बताया गया है।", "तालिका: सूचना विश्वसनीयता मैट्रिक्स। स्रोत A, B और C से सात कथन, हर कथन के साथ विश्वसनीयता स्तर, उसे प्रकाशित करना है या नहीं, और सत्यापन की ज़रूरत है या नहीं। स्रोत A के तीनों कथनों को निम्न रेट किया गया है और उन्हें प्रकाशित नहीं करना चाहिए।", "<strong>कथन</strong>", "<strong>स्रोत</strong>", "<strong>विश्वसनीयता स्तर</strong>", "<strong>प्रकाशित करें?</strong>", "<strong>सत्यापन ज़रूरी?</strong>", "IPAP का वैश्विक रोलआउट सफलतापूर्वक पूरा हुआ।", "स्रोत A", "निम्न", "नहीं", "हाँ। स्रोत C (EMEA और APAC में विस्तार अभी जारी है) और स्रोत B (APAC के लगभग 40% अनुरोध अभी भी मैन्युअल हैं) से इसका सीधा खंडन होता है।", "सभी क्षेत्रों में प्रोविज़निंग का समय 12 से घटकर 3 दिन हो गया।", "हाँ। स्रोत B (APAC का औसत 6 दिन है) और भाग 4 के मेट्रिक्स (EMEA 4 दिन पर, APAC 6 दिन पर) से इसका खंडन होता है। केवल NA 3 दिन तक पहुँचा।", "क्षेत्रीय अपनाने की दर 95% तक पहुँच गई।", "हाँ। स्रोत C स्पष्ट करता है कि 95% अपनाने की दर केवल पायलट टीमों पर लागू होती है, पूरे क्षेत्रों पर नहीं।", "पुरानी निर्भरताओं के कारण APAC में लगभग 40% अनुरोधों के लिए अभी भी मैन्युअल प्रोविज़निंग ज़रूरी है।", "स्रोत B", "मध्यम", "हाँ (केवल आंतरिक संचालन के लिए)", "हाँ। मौजूदा प्रतिशत, पुराने सिस्टम की विशिष्ट रुकावटें और सुधार की समय-सीमा की पुष्टि करें।", "APAC में औसत प्रोविज़निंग अवधि अभी भी 6 दिन है।", "उच्च", "हाँ", "आंशिक रूप से। भाग 4 के मेट्रिक्स से पुष्टि होती है (APAC जून = 6 दिन)। पुष्टि करें कि औसत में मैन्युअल अनुरोध शामिल हैं या नहीं (डिलिवरेबल B का प्रश्न 9)।", "95% अपनाने की दर केवल पायलट टीमों पर लागू होती है।", "स्रोत C", "हाँ, दायरा बताते हुए", "हाँ। यह कार्यकारी अपडेट और संचालन डेटा के बीच के अंतर को समझाता है। पुष्टि करें कि अपनाने की दर कैसे मापी जाती है (डिलिवरेबल B का प्रश्न 2)।", "EMEA और APAC में विस्तार अभी जारी है।", "नहीं। यह स्रोत B और मेट्रिक्स से मेल खाता है, जिनमें EMEA और APAC, NA से पीछे दिखते हैं।", "IPAP की स्थिति, मेट्रिक या क्षमता के बारे में कोई भी दावा प्रकाशित करने से पहले इन प्रश्नों के उत्तर मिलने चाहिए।", "<strong>दायरा और परिभाषाएँ</strong>", "“वैश्विक रोलआउट पूरा हुआ” का क्या अर्थ है, और आज कौन-से क्षेत्र और टीमें लाइव हैं?", "अपनाने की दर कैसे मापी जाती है, और 95% किस पर आधारित है?", "प्रोविज़निंग का समय कैसे मापा जाता है, और क्या इसमें सुरक्षा अनुमोदन के इंतज़ार का समय शामिल है?", "रीवर्क की परिभाषा क्या है, और IPAP से पहले रीवर्क दर क्या थी?", "<strong>डेटा स्रोत</strong>", "प्रोविज़निंग और रीवर्क के आँकड़े किस सिस्टम से आते हैं, और उस डेटा का स्वामी कौन है?", "क्या आँकड़े केवल पायलट टीमों को कवर करते हैं, या हर क्षेत्र के सभी अनुरोधों को?", "<strong>विरोधाभासी जानकारी</strong>", "क्या “12 से 3 दिन” केवल उत्तरी अमेरिका के लिए है, या इसे वैश्विक आँकड़े के रूप में कहा गया था?", "क्या APAC के लिए 40% मैन्युअल प्रोविज़निंग का आँकड़ा अभी भी सही है?", "क्या APAC के 6 दिन के औसत में मैन्युअल अनुरोध शामिल हैं?", "क्या IPAP के अलावा किसी और चीज़, जैसे स्टाफ़ या अनुरोधों की संख्या, ने प्रोविज़निंग का समय घटाने में मदद की?", "<strong>समीक्षा और अनुमोदन</strong>", "हर कथन किस तारीख तक सही है, और उसे दोबारा कब जाँचना चाहिए?", "दर्शक कौन हैं, और वे इस जानकारी से क्या निर्णय लेंगे?", "क्या कोई सामग्री ऐसे सुरक्षा नियंत्रण या अनुमोदन के वैकल्पिक तरीके बताती है जिन्हें प्रतिबंधित रहना चाहिए?", "प्रकाशन से पहले इस सामग्री को कौन अनुमोदित करता है, और इसे अपडेट कौन रखता है?", "<strong>अनुपलब्ध जानकारी</strong>", "कौन-से प्रोविज़निंग वर्कफ़्लो Jenkins के ज़रिए पूरी तरह स्वचालित हैं?", "किन स्थितियों में अभी भी मैन्युअल सुरक्षा अनुमोदन ज़रूरी है?", "“Windows सपोर्ट अभी पूरी तरह स्थिर नहीं है” का क्या अर्थ है?", "क्या Windows ड्रिफ़्ट डिटेक्शन प्रोडक्शन उपयोग के लिए आधिकारिक रूप से समर्थित है?", "इन्वेंटरी सिंक्रनाइज़ेशन के कौन-से जॉब अभी भी ट्यून किए जा रहे हैं?", "इन्वेंटरी सिंक्रनाइज़ेशन विफल होने या देर होने पर संचालन पर क्या असर पड़ता है?", "<strong>अनुवर्ती प्रश्न</strong>", "किन स्थितियों में मैन्युअल सुरक्षा समीक्षा शुरू होती है?", "उन अनुरोधों को कौन अनुमोदित करता है, और क्या अनुमोदन से प्रोविज़निंग के समय पर असर पड़ता है?", "Windows ड्रिफ़्ट डिटेक्शन में कौन-सी विशिष्ट समस्याएँ हैं?", "क्या Windows के लिए विफलता दर या सीमाएँ ज्ञात हैं?", "इन्वेंटरी सिंक्रनाइज़ेशन जॉब कितनी बार चलते हैं?", "सिंक्रनाइज़ेशन विफल होने पर क्या होता है?", "क्या रीट्राई, मॉनिटरिंग और अलर्ट पहले से मौजूद हैं?", "इन सुविधाओं को स्थिर मानने से पहले क्या पूरा करना होगा?", "<strong>दस्तावेज़ीकरण के जोखिम</strong>", "सत्यापन होने तक इन्हें पुष्ट तथ्यों के रूप में प्रकाशित न करें:", "“प्रोविज़निंग पूरी तरह स्वचालित है।”", "“Jenkins सभी प्रोविज़निंग वर्कफ़्लो संभालता है।”", "“Windows ड्रिफ़्ट डिटेक्शन पूरी तरह समर्थित है।”", "“इन्वेंटरी सिंक्रनाइज़ेशन स्थिर है।”", "“किसी मैन्युअल हस्तक्षेप की ज़रूरत नहीं है।”", "सुरक्षा अनुमोदन के मानदंड और वैकल्पिक तरीके सत्यापन के बाद भी प्रतिबंधित रहने चाहिए।", "कार्यक्रम की स्थिति", "क्विकस्टार्ट गाइड", "एक्सेस और ऑनबोर्डिंग", "आर्किटेक्चर का अवलोकन", "Linux", "Windows (ड्रिफ़्ट डिटेक्शन अभी स्थिर नहीं है)", "इन्फ्रास्ट्रक्चर फ़ुटप्रिंट", "स्वचालित पाइपलाइन", "मैन्युअल ओवरराइड और अनुमोदन (प्रतिबंधित)", "एक्सेस नियंत्रण और RBAC", "सीक्रेट्स प्रबंधन (प्रतिबंधित)", "सुरक्षा अनुमोदन (प्रतिबंधित)", "अनुपालन ऑडिट", "गुणवत्ता जाँच", "ड्रिफ़्ट डिटेक्शन", "इन्वेंटरी ऑडिट", "प्रोविज़निंग की स्थिति", "मेट्रिक की परिभाषाएँ", "ज्ञात सीमाएँ", "समस्या निवारण", "एस्केलेशन और ऑन-कॉल", "रिलीज़ नोट्स और चेंज लॉग", "फ़ीडबैक", "IPAP नॉलेज सेंटर कार्य-आधारित संरचना का उपयोग करता है, जो उसी क्रम में है जिसमें उपयोगकर्ता काम करते हैं: शुरुआत, प्लेटफ़ॉर्म सपोर्ट की जाँच, प्रोविज़निंग, सुरक्षा, सत्यापन, मॉनिटरिंग, संचालन और गवर्नेंस। कार्यक्रम की स्थिति, मेट्रिक की परिभाषाएँ और प्लेटफ़ॉर्म सपोर्ट, हर एक को एक ही जगह परिभाषित किया गया है, ताकि सभी टीमें एक ही जानकारी से काम करें। संचालन संबंधी मार्गदर्शन, सीमाएँ और रिलीज़ की जानकारी अलग रखी गई है, ताकि उपयोगकर्ता अपनी भूमिका के अनुसार जानकारी ढूँढ सकें।", "तालिका: IPAP नॉलेज सेंटर के लक्षित उपयोगकर्ता। आठ खंड, हर खंड के साथ उसके मुख्य उपयोगकर्ता और वे वहाँ क्या ढूँढने आते हैं।", "<strong>खंड</strong>", "<strong>मुख्य उपयोगकर्ता</strong>", "<strong>वे क्या ढूँढने आते हैं</strong>", "शुरुआत करें", "नए अनुरोधकर्ता और अनुमोदक", "एक्सेस, ऑनबोर्डिंग और IPAP कैसे काम करता है", "प्लेटफ़ॉर्म सपोर्ट", "इन्फ्रास्ट्रक्चर और प्लेटफ़ॉर्म इंजीनियर", "OS और क्षेत्र के अनुसार क्या समर्थित है", "प्रोविज़निंग", "इन्फ्रास्ट्रक्चर इंजीनियर, ऑपरेटर", "प्रोविज़न कैसे करें, मैन्युअल और अनुमोदन चरणों सहित", "सुरक्षा और अनुपालन", "सुरक्षा, अनुपालन और अनुमोदक", "एक्सेस नियंत्रण, अनुमोदन और ऑडिट की आवश्यकताएँ", "सत्यापन", "ऑपरेटर, QA", "गुणवत्ता जाँच, ड्रिफ़्ट डिटेक्शन, इन्वेंटरी की सटीकता", "मॉनिटरिंग और ऑब्ज़र्वेबिलिटी", "संचालन प्रबंधक, SRE", "प्रोविज़निंग की स्थिति और मेट्रिक की परिभाषाएँ", "संचालन और सपोर्ट", "सपोर्ट इंजीनियर, ऑन-कॉल टीमें", "ज्ञात सीमाएँ, समस्या निवारण, एस्केलेशन", "गवर्नेंस और रिलीज़", "कार्यक्रम के स्वामी, तकनीकी लेखक", "रिलीज़ नोट्स, बदलावों का इतिहास, सामग्री का स्वामित्व", "हर खंड का एक ही जवाबदेह स्वामी होता है, भले ही कई टीमें उसकी समीक्षा करें:", "<strong>इंजीनियरिंग SME:</strong> तकनीकी सटीकता और प्लेटफ़ॉर्म का व्यवहार", "<strong>संचालन SME:</strong> संचालन प्रक्रियाएँ, समस्या निवारण और एस्केलेशन सामग्री", "<strong>सुरक्षा और अनुपालन टीमें:</strong> सुरक्षा नियंत्रण, अनुमोदन और अनुपालन सामग्री", "<strong>तकनीकी लेखक:</strong> संरचना, एकरूपता, उपयोग में आसानी और प्रकाशन मानक", "<strong>कार्यक्रम के स्वामी:</strong> कार्यक्रम की स्थिति, मेट्रिक्स और अंतिम व्यावसायिक अनुमोदन", "समीक्षा कितनी बार होगी, यह इस पर निर्भर करता है कि सामग्री कितनी बार बदलती है और गलती से कितना जोखिम है।", "<strong>हर रिलीज़ पर, SME की स्वीकृति के साथ:</strong> प्लेटफ़ॉर्म सपोर्ट, प्रोविज़निंग वर्कफ़्लो, सत्यापन प्रक्रियाएँ", "<strong>मासिक:</strong> ज्ञात सीमाएँ, एस्केलेशन संपर्क, कार्यक्रम की स्थिति", "<strong>तिमाही, या नीति बदलने पर:</strong> सुरक्षा और अनुपालन प्रक्रियाएँ", "<strong>तिमाही:</strong> शुरुआत, FAQ, समस्या निवारण", "<strong>किसी भी बदलाव से पहले:</strong> मेट्रिक की परिभाषाएँ, जिनके लिए कार्यक्रम स्वामी का अनुमोदन ज़रूरी है", "हर अपडेट अपने समीक्षक और अनुमोदन की तारीख चेंज लॉग में दर्ज करता है, ताकि हर बदलाव को उसे अनुमोदित करने वाले व्यक्ति तक ट्रेस किया जा सके।", "नॉलेज सेंटर सटीक बना रहता है, क्योंकि हर पेज का एक स्वामी, एक समीक्षा तारीख और अपडेट का एक स्पष्ट कारण होता है।", "<strong>स्वामित्व।</strong> हर खंड का एक ही जवाबदेह स्वामी है, जैसा कि इस दस्तावेज़ के खंड 3, सामग्री का स्वामित्व, में बताया गया है।", "<strong>तय समीक्षाएँ।</strong> सामग्री की समीक्षा इस दस्तावेज़ के खंड 4, समीक्षा और गवर्नेंस, के शेड्यूल के अनुसार होती है। जिन पेजों की समीक्षा तारीख निकल चुकी है, उन्हें चिह्नित किया जाता है।", "<strong>अपडेट के कारण।</strong> पाइपलाइन, प्लेटफ़ॉर्म या प्रक्रिया में कोई बदलाव तब तक पूरा नहीं होता जब तक प्रभावित पेज अपडेट न हो जाएँ। हर अपडेट चेंज लॉग में दर्ज होता है।", "<strong>सत्य का एक ही स्रोत।</strong> कार्यक्रम की स्थिति, मेट्रिक की परिभाषाएँ और प्लेटफ़ॉर्म सपोर्ट, हर एक को एक ही जगह परिभाषित किया गया है और दूसरे पेजों से लिंक किया गया है, ताकि कोई बदलाव केवल एक बार करना पड़े।", "<strong>समाप्ति और हटाना।</strong> हर ज्ञात सीमा का एक स्वामी और एक लक्ष्य तारीख होती है। पुराने पेज तिमाही सामग्री ऑडिट के दौरान हटा दिए जाते हैं या मिला दिए जाते हैं।", "इस खंड में चैलेंज का नीचे दिया गया डेटा उपयोग किया गया है।", "तालिका: क्षेत्र के अनुसार प्रोविज़निंग अवधि और रीवर्क दर। NA: जनवरी, मार्च और जून में 12, 8 और 3 दिन, 3% रीवर्क दर के साथ। EMEA: 11, 7 और 4 दिन, 5% रीवर्क के साथ। APAC: 13, 10 और 6 दिन, 9% रीवर्क के साथ।", "<strong>क्षेत्र</strong>", "<strong>जनवरी (दिन)</strong>", "<strong>मार्च (दिन)</strong>", "<strong>जून (दिन)</strong>", "<strong>रीवर्क दर</strong>", "<strong>NA</strong>", "<strong>EMEA</strong>", "<strong>APAC</strong>", "<em>चित्र 1: जनवरी से जून तक क्षेत्र के अनुसार औसत प्रोविज़निंग अवधि।</em>", "IPAP पायलट ने तीनों क्षेत्रों में प्रोविज़निंग का समय घटाया है। जनवरी से जून के बीच प्रोविज़निंग का समय उत्तरी अमेरिका में 12 से 3 दिन, EMEA में 11 से 4 दिन और APAC में 13 से 6 दिन हो गया। तेज़ प्रोविज़निंग का अर्थ है कि टीमों को ज़रूरी इन्फ्रास्ट्रक्चर जल्दी मिलता है।", "फिर भी, कार्यक्रम वैश्विक रोलआउट के लिए तैयार नहीं है:", "EMEA और APAC में विस्तार अभी जारी है।", "95% अपनाने का आँकड़ा केवल पायलट टीमों पर लागू होता है।", "3 दिन का परिणाम केवल उत्तरी अमेरिका पर लागू होता है।", "<strong>मुख्य जोखिम</strong>", "पुरानी निर्भरताओं के कारण APAC के लगभग 40% अनुरोधों के लिए अभी भी मैन्युअल प्रोविज़निंग ज़रूरी है। APAC में रीवर्क दर भी सबसे अधिक है (9%, जबकि उत्तरी अमेरिका में 3%)।", "Windows ड्रिफ़्ट डिटेक्शन अभी स्थिर नहीं है।", "सुरक्षा अनुमोदन और इन्वेंटरी सिंक्रनाइज़ेशन में अभी भी मैन्युअल काम करना पड़ता है।", "<strong>तैयारी:</strong> IPAP चरणबद्ध, क्षेत्र-दर-क्षेत्र रोलआउट के लिए तैयार है। इसे वैश्विक रोलआउट के रूप में घोषित करने के लिए यह अभी तैयार नहीं है।", "<strong>नेतृत्व से ज़रूरी निर्णय</strong>", "हर क्षेत्र के लिए तैयारी के मानदंड अनुमोदित करें।", "APAC की पुरानी निर्भरताएँ हटाने के लिए फ़ंडिंग अनुमोदित करें।", "पिछले कार्यकारी अपडेट की जगह एक सुधारा हुआ स्थिति अपडेट अनुमोदित करें।", "<strong>मौजूदा स्थिति</strong>", "Jenkins अब पायलट टीमों के लिए प्रोविज़निंग संभालता है, लेकिन कुछ चरण अभी भी मैन्युअल हैं:", "अपवाद अनुरोधों के लिए सुरक्षा अनुमोदन", "पुरानी निर्भरताओं वाले अनुरोध, मुख्य रूप से APAC में", "दो ज्ञात सीमाएँ भी रोज़ के संचालन पर असर डालती हैं: Windows ड्रिफ़्ट डिटेक्शन अभी स्थिर नहीं है, और इन्वेंटरी सिंक्रनाइज़ेशन जॉब अभी भी ट्यून किए जा रहे हैं।", "<strong>क्षेत्रीय अंतर</strong>", "तालिका: जून में क्षेत्रीय अंतर। NA: 3 दिन, 3% रीवर्क, संदर्भ के रूप में उपयोग किया जा सकता है। EMEA: 4 दिन, 5% रीवर्क, विस्तार जारी है। APAC: 6 दिन, 9% रीवर्क, विस्तार जारी है, और लगभग 40% अनुरोध अभी भी मैन्युअल हैं।", "<strong>जून में प्रोविज़निंग का समय</strong>", "<strong>टिप्पणियाँ</strong>", "3 दिन", "लक्ष्य स्थिति के सबसे करीब। संदर्भ के रूप में उपयोग किया जा सकता है।", "4 दिन", "विस्तार जारी है। ऑनबोर्डिंग के दौरान कमियों को दर्ज करें।", "6 दिन", "विस्तार जारी है। लगभग 40% अनुरोध अभी भी मैन्युअल हैं।", "<strong>फ़िलहाल टीमों को क्या करना चाहिए</strong>", "Windows होस्ट पर ड्रिफ़्ट की मैन्युअल जाँच करें।", "प्रोविज़निंग अनुरोध भेजने से पहले इन्वेंटरी रिकॉर्ड की पुष्टि करें।", "पुरानी निर्भरताओं वाले अनुरोधों के लिए मैन्युअल वर्कफ़्लो का उपयोग करें।", "<strong>अपनाने से जुड़ी बातें</strong>", "95% अपनाने का आँकड़ा केवल पायलट टीमों को कवर करता है। नई टीमों को ऑनबोर्ड करने से पहले, अपनाने की दर को बिना मैन्युअल चरणों के पूरे हुए अनुरोधों के प्रतिशत के रूप में परिभाषित करना चाहिए, और हर क्षेत्र की एक बेसलाइन होनी चाहिए।", "<strong>सुधार के अवसर</strong>", "APAC की हर पुरानी निर्भरता को हटाने या उसका विकल्प निकालने की योजना बनाएँ।", "मूल कारण के अनुसार रीवर्क को ट्रैक करें।", "तय करें कि Windows ड्रिफ़्ट डिटेक्शन को कब स्थिर माना जाएगा।", "मापें कि कितने अनुरोधों को मैन्युअल सुरक्षा अनुमोदन की ज़रूरत होती है और वे कितनी देर इंतज़ार करते हैं।", "स्वचालित और मैन्युअल अनुरोधों के लिए प्रोविज़निंग समय का मीडियन और P90 अलग-अलग रिपोर्ट करें।", "नेतृत्व के लिए मासिक डैशबोर्ड दिखाता है कि IPAP काम कर रहा है या नहीं, क्या उसका विस्तार सुरक्षित है, और किस पर निर्णय की ज़रूरत है। हर मेट्रिक क्षेत्र के अनुसार, समय के साथ उसके रुझान सहित दिखाई देता है, और उसमें उसकी परिभाषा, डेटा स्रोत, स्वामी और पिछले अपडेट की तारीख होती है।<br/> <br/> नीचे दिया गया चित्र जनवरी से जून तक हर क्षेत्र का औसत प्रोविज़निंग समय दिखाता है। तीनों क्षेत्रों में प्रोविज़निंग का समय घटा, लेकिन केवल उत्तरी अमेरिका 3 दिन तक पहुँचा।<br/> <br/>", "चार्ट का पाठ विवरण", "जनवरी से जून तक क्षेत्र के अनुसार औसत प्रोविज़निंग अवधि का लाइन चार्ट। तीनों क्षेत्रों में सुधार हुआ। NA 12 से 8 और फिर 3 दिन पर आया। EMEA 11 से 7 और फिर 4 दिन पर आया। APAC 13 से 10 और फिर 6 दिन पर आया। केवल NA 3 दिन तक पहुँचा।", "तालिका: डैशबोर्ड के लिए सुझाए गए मेट्रिक्स। आठ मेट्रिक्स, हर एक के साथ वह क्या ट्रैक करता है और क्यों ज़रूरी है: रोलआउट की प्रगति, ऑटोमेशन दर, प्रोविज़निंग का समय, रीवर्क दर, मैन्युअल सुरक्षा अनुमोदन, ड्रिफ़्ट डिटेक्शन कवरेज, इन्वेंटरी की सटीकता और तैयारी की स्थिति।", "<strong>मेट्रिक</strong>", "<strong>यह क्या ट्रैक करता है</strong>", "<strong>यह क्यों ज़रूरी है</strong>", "रोलआउट की प्रगति", "लाइव क्षेत्र और टीमें, योजना की तुलना में", "सामान्य दावों के बजाय वास्तविक प्रगति दिखाता है", "ऑटोमेशन दर", "बिना मैन्युअल चरणों के पूरे हुए अनुरोध", "दिखाता है कि कितनी टीमें वास्तव में IPAP का उपयोग करती हैं", "प्रोविज़निंग का समय", "दिनों में मीडियन और P90, स्वचालित और मैन्युअल अनुरोधों के लिए", "दिखाता है कि प्रोविज़निंग कितनी तेज़ है, लंबी देरी सहित", "रीवर्क दर", "ऐसे अनुरोध जिन्हें ठीक करना पड़ता है", "दिखाता है कि तेज़ प्रोविज़निंग से गुणवत्ता पर असर पड़ता है या नहीं", "मैन्युअल सुरक्षा अनुमोदन", "अनुमोदनों की संख्या और उनमें कितना समय लगता है", "दिखाता है कि अनुमोदन देरी का कारण बन रहे हैं या नहीं", "ड्रिफ़्ट डिटेक्शन कवरेज", "कवर किए गए होस्ट, OS के अनुसार", "अनुपालन की कमियाँ दिखाता है, जैसे Windows", "इन्वेंटरी की सटीकता", "मेल खाने वाले रिकॉर्ड, और सिंक में कितना समय लगता है", "दिखाता है कि ऑटोमेशन सही डेटा का उपयोग कर रहा है या नहीं", "तैयारी की स्थिति", "हर क्षेत्र के लिए तैयार, प्रगति पर, या तैयार नहीं", "दिखाता है कि कौन-से क्षेत्र आगे बढ़ सकते हैं", "<strong>क्या कार्यक्रम व्यापक रोलआउट के लिए तैयार है?</strong>", "हाँ, एक बार में एक क्षेत्र के चरणबद्ध रोलआउट के लिए। नहीं, वैश्विक रोलआउट की घोषणा के लिए। उत्तरी अमेरिका संदर्भ क्षेत्र है। APAC पूरे रोलआउट पर तभी जाता है जब उसकी पुरानी निर्भरताओं के लिए योजना हो।", "<strong>तथ्य</strong>", "स्रोत और मेट्रिक्स डेटा ये बातें बताते हैं:", "जनवरी से जून तक सभी क्षेत्रों में प्रोविज़निंग का समय घटा: NA में 12 से 3 दिन, EMEA में 11 से 4 दिन और APAC में 13 से 6 दिन।", "95% अपनाने की दर केवल पायलट टीमों पर लागू होती है।", "रीवर्क दरें NA में 3%, EMEA में 5% और APAC में 9% हैं।", "कुछ सुरक्षा अनुमोदन अभी भी मैन्युअल हैं।", "<strong>अनुमान</strong>", "ये कथन मेरे अनुमान हैं, लेकिन इनकी पुष्टि नहीं हुई है:", "प्रोविज़निंग समय हर क्षेत्र के सभी अनुरोधों का औसत है।", "सुधार का मुख्य कारण IPAP है, स्टाफ़ या अनुरोधों की संख्या में बदलाव नहीं।", "APAC के लगभग 40% अनुरोध अभी भी मैन्युअल हैं।", "APAC में अधिक रीवर्क दर का कारण मैन्युअल प्रोविज़निंग या पुरानी निर्भरताएँ हैं।", "<strong>जोखिम और बाकी चिंताएँ</strong>", "<strong>विश्वसनीयता:</strong> पिछला कार्यकारी अपडेट शायद पहले ही निर्णयों को प्रभावित कर चुका है।", "<strong>विस्तार:</strong> अनुरोधों की संख्या बढ़ने के साथ APAC में मैन्युअल काम और रीवर्क बढ़ सकता है।", "<strong>अनुपालन:</strong> Windows होस्ट पर स्थिर ड्रिफ़्ट डिटेक्शन नहीं है।", "<strong>डेटा गुणवत्ता:</strong> प्रोविज़निंग पुराने इन्वेंटरी रिकॉर्ड पर निर्भर हो सकती है।", "<strong>प्रकाशन से पहले सत्यापित की जाने वाली जानकारी</strong>", "हर क्षेत्र के लिए रोलआउट की स्थिति और तारीखें", "अपनाने की दर और प्रोविज़निंग का समय कैसे मापा जाता है", "क्या आँकड़े केवल पायलट टीमों को कवर करते हैं", "APAC में मैन्युअल अनुरोधों का मौजूदा प्रतिशत", "Windows और Linux के सपोर्ट की स्थिति", "<strong>सुझाव</strong>", "आगे बढ़ने से पहले नेतृत्व को ये करना होगा:", "तारीखों के साथ सुधारा हुआ स्थिति अपडेट प्रकाशित करें।", "अपनाने की दर, प्रोविज़निंग समय और रीवर्क के लिए मानक परिभाषाएँ अनुमोदित करें।", "हर क्षेत्र के लिए तैयारी के मानदंडों पर सहमति बनाएँ, जैसे लक्षित ऑटोमेशन दर और अधिकतम रीवर्क दर।", "APAC की पुरानी निर्भरताओं को हटाने या उनका विकल्प निकालने की योजना के लिए फ़ंड दें।", "तय करें कि Windows ड्रिफ़्ट डिटेक्शन कब स्थिर है।", "अगला क्षेत्र लाइव होने से पहले, नामित स्वामियों के साथ IPAP नॉलेज सेंटर शुरू करें।", "मैंने इस चैलेंज के दौरान Claude (Anthropic) का उपयोग किया। अंतिम सामग्री, रेटिंग और सुझाव मेरे निर्णय हैं।", "खंड 1: उपयोग किए गए प्रॉम्प्ट", "अपना ड्राफ़्ट साझा किया और एकरूपता के लिए कुछ खंडों में बदलाव करने को कहा।", "रखरखाव रणनीति और सूचना संरचना जैसे विशिष्ट खंडों पर फ़ीडबैक माँगा, और सत्यापन के प्रश्नों को मेरी शैली में दोबारा लिखने को कहा।", "प्रोविज़निंग समय के रुझान के लिए एक चित्र शामिल करने को कहा।", "इस दस्तावेज़ को प्रकाशित करने के लिए एक लोकल वेब पेज बनाना।", "ड्रॉपडाउन के साथ बहुभाषी (5 भाषाएँ) विकल्प बनाना, ताकि अलग-अलग क्षेत्रों के लोग इस दस्तावेज़ को अपनी पसंद की भाषा में पढ़ सकें।", "खंड 2: स्वीकार किए गए आउटपुट", "सूचना संरचना के अवलोकन, लक्षित उपयोगकर्ताओं, समीक्षा चक्रों और रखरखाव रणनीति को अधिक विशिष्ट बनाने के सुझाव।", "प्रोविज़निंग समय के रुझान का चार्ट।", "दस्तावेज़ को वेब पेज के रूप में देखने के लिए index.html। (मैं इसे आज की हमारी मीटिंग में साझा करूँगी)", "खंड 3: अस्वीकार या बदले गए आउटपुट", "कुछ ड्राफ़्ट अस्वीकार किए, क्योंकि उनका लहजा तकनीकी के बजाय प्रेरक था।", "रुझान चार्ट के लिए रंगीन और भारी फ़ॉर्मेटिंग वाला लेआउट अस्वीकार किया।", "विश्लेषण के लिए AI के तालिका फ़ॉर्मेट के बजाय अपनी संरचना रखी।"], "zh": ["IPAP 试点评估与推广建议", "员工体验挑战 | 技术写作，数据中心运营与工程", "下载 Word 版本", "目录", "简介", "缩写", "第 1 部分：相互矛盾的信息分析", "信息可信度矩阵（交付物 A）", "发布前验证问题（交付物 B）", "第 2 部分：SME 访谈分析（交付物 C）", "第 3 部分：信息架构（交付物 D）", "IPAP 知识中心", "1. 信息架构概述", "2. 目标用户", "3. 内容负责人", "4. 审核与治理", "5. 维护策略", "第 4 部分：指标", "高管叙述（交付物 E）", "运营叙述（交付物 F）", "仪表板建议（交付物 G）", "第 5 部分：给管理层的建议（交付物 H）", "第 6 部分：AI 使用记录（交付物 I）", "本文档根据挑战中提供的信息，介绍我对基础设施配置自动化项目（IPAP）的评估。目标是评估相互矛盾和不完整的信息，识别哪些信息可信、哪些需要进一步验证，并将结论整理成清晰、实用的文档。本文档还涵盖信息架构、内容治理、面向不同受众的沟通、关键指标，以及关于该项目是否已准备好更大范围推广的最终建议。", "本文档使用以下缩写来指代主要项目、角色、地区和技术。", "表：本文档使用的缩写。两列：缩写和全称。共十二行，从 IPAP（基础设施配置自动化项目）到 AI（人工智能）。", "<strong>缩写</strong>", "<strong>全称</strong>", "IPAP", "基础设施配置自动化项目", "SME", "主题专家", "NA", "北美", "EMEA", "欧洲、中东和非洲", "APAC", "亚太地区", "OS", "操作系统", "RBAC", "基于角色的访问控制", "QA", "质量保证", "SRE", "站点可靠性工程师", "第 90 百分位", "FAQ", "常见问题", "AI", "人工智能", "每条陈述按以下可信度等级评级：", "<strong>高：</strong>由两个或更多来源证实，或由指标数据证实。", "<strong>中：</strong>来自一个可靠来源，但属于估计、没有日期或定义不完整。", "<strong>低：</strong>与其他来源矛盾，或把局部结果说成整体结果。", "表：信息可信度矩阵。来自来源 A、B 和 C 的七条陈述，每条都列出可信度等级、是否发布以及是否需要验证。来源 A 的三条陈述评级为低，不应发布。", "<strong>陈述</strong>", "<strong>来源</strong>", "<strong>可信度等级</strong>", "<strong>是否发布？</strong>", "<strong>是否需要验证？</strong>", "IPAP 全球推广已成功完成。", "来源 A", "低", "否", "是。与来源 C（向 EMEA 和 APAC 的扩展仍在进行）和来源 B（APAC 约 40% 的请求仍为手动处理）直接矛盾。", "所有地区的配置时间从 12 天缩短到 3 天。", "是。与来源 B（APAC 平均为 6 天）和第 4 部分的指标（EMEA 为 4 天，APAC 为 6 天）矛盾。只有 NA 达到了 3 天。", "地区采用率达到 95%。", "是。来源 C 说明 95% 的采用率只适用于试点团队，而不是整个地区。", "由于遗留依赖，APAC 约 40% 的请求仍需手动配置。", "来源 B", "中", "是（仅限内部运营）", "是。确认当前比例、具体的遗留系统障碍和修复时间表。", "APAC 的平均配置时长仍为 6 天。", "高", "是", "部分需要。已由第 4 部分的指标证实（APAC 六月 = 6 天）。确认该平均值是否包含手动请求（交付物 B 的问题 9）。", "95% 的采用率只适用于试点团队。", "来源 C", "是，需注明范围", "是。解释了高管更新与运营数据之间的差距。确认采用率的衡量方式（交付物 B 的问题 2）。", "向 EMEA 和 APAC 的扩展仍在进行。", "否。与来源 B 和指标一致，指标显示 EMEA 和 APAC 落后于 NA。", "在发布任何关于 IPAP 状态、指标或能力的说法之前，必须回答这些问题。", "<strong>范围与定义</strong>", "“全球推广已完成”是什么意思？目前哪些地区和团队已上线？", "采用率如何衡量？95% 是基于什么得出的？", "配置时间如何衡量？是否包括等待安全审批的时间？", "返工如何定义？IPAP 之前的返工率是多少？", "<strong>数据来源</strong>", "配置和返工数据来自哪个系统？这些数据由谁负责？", "这些数据只涵盖试点团队，还是涵盖每个地区的所有请求？", "<strong>相互矛盾的信息</strong>", "“从 12 天到 3 天”只指北美，还是本意是全球数据？", "APAC 40% 手动配置的数据现在是否仍然准确？", "APAC 6 天的平均值是否包含手动请求？", "除了 IPAP，人员配置或请求量等其他因素是否也帮助缩短了配置时间？", "<strong>审核与审批</strong>", "每条陈述截至哪个日期是准确的？何时需要再次检查？", "受众是谁？他们会根据这些信息做出哪些决定？", "是否有内容暴露了应保持受限的安全控制或审批变通方法？", "发布前由谁审批这些内容？由谁负责保持更新？", "<strong>缺失的信息</strong>", "哪些配置工作流已通过 Jenkins 完全自动化？", "哪些情况仍需要手动安全审批？", "“Windows 支持还不完全稳定”是什么意思？", "Windows 偏差检测是否正式支持生产环境使用？", "哪些库存同步作业仍在调优？", "库存同步失败或延迟时，对运营有什么影响？", "<strong>后续问题</strong>", "哪些条件会触发手动安全审核？", "这些请求由谁审批？审批是否会影响配置时间？", "Windows 偏差检测存在哪些具体问题？", "Windows 是否有已知的失败率或限制？", "库存同步作业多久运行一次？", "同步失败时会发生什么？", "是否已经有重试、监控和告警机制？", "这些功能需要完成哪些工作才能被视为稳定？", "<strong>文档风险</strong>", "在验证之前，不要将以下内容作为已确认的事实发布：", "“配置已完全自动化。”", "“Jenkins 处理所有配置工作流。”", "“Windows 偏差检测已完全支持。”", "“库存同步是稳定的。”", "“不需要任何人工干预。”", "安全审批标准和变通方法即使在验证之后也应保持受限。", "项目状态", "快速入门指南", "访问与入职", "架构概述", "Linux", "Windows（偏差检测尚不稳定）", "基础设施规模", "自动化流水线", "手动覆盖与审批（受限）", "访问控制与 RBAC", "密钥管理（受限）", "安全审批（受限）", "合规审计", "质量关卡", "偏差检测", "库存审计", "配置状态", "指标定义", "已知限制", "故障排除", "升级与值班", "发布说明与变更日志", "反馈", "IPAP 知识中心采用基于任务的结构，按照用户的工作顺序排列：入门、查看平台支持、配置、安全、验证、监控、运营和治理。项目状态、指标定义和平台支持各自只在一处定义，因此所有团队使用相同的信息。运营指南、限制和发布信息分开存放，方便用户根据自己的角色查找信息。", "表：IPAP 知识中心的目标用户。共八个部分，每个部分列出主要用户及其查找的内容。", "<strong>部分</strong>", "<strong>主要用户</strong>", "<strong>他们查找的内容</strong>", "入门", "新的请求者和审批人", "访问、入职以及 IPAP 的工作方式", "平台支持", "基础设施和平台工程师", "按 OS 和地区列出的支持范围", "配置", "基础设施工程师、操作员", "如何配置，包括手动步骤和审批步骤", "安全与合规", "安全、合规人员和审批人", "访问控制、审批和审计要求", "验证", "操作员、QA", "质量检查、偏差检测、库存准确性", "监控与可观测性", "运营经理、SRE", "配置状态和指标定义", "运营与支持", "支持工程师、值班团队", "已知限制、故障排除、升级", "治理与发布", "项目负责人、技术写作人员", "发布说明、变更历史、内容负责人", "即使有多个团队参与审核，每个部分也只有一个负责人：", "<strong>工程 SME：</strong>技术准确性和平台行为", "<strong>运营 SME：</strong>运营流程、故障排除和升级内容", "<strong>安全与合规团队：</strong>安全控制、审批和合规内容", "<strong>技术写作人员：</strong>结构、一致性、易用性和发布标准", "<strong>项目负责人：</strong>项目状态、指标和最终业务审批", "审核频率取决于内容变化的频率以及出错带来的风险。", "<strong>每次发布，并由 SME 签核：</strong>平台支持、配置工作流、验证流程", "<strong>每月：</strong>已知限制、升级联系人、项目状态", "<strong>每季度，或政策变更时：</strong>安全与合规流程", "<strong>每季度：</strong>入门、FAQ、故障排除", "<strong>任何变更之前：</strong>指标定义，需要项目负责人审批", "每次更新都会在变更日志中记录审核人和审批日期，因此每项变更都能追溯到批准它的人。", "知识中心能保持准确，是因为每个页面都有负责人、审核日期和明确的更新触发条件。", "<strong>负责人。</strong>每个部分只有一个负责人，见本文档第 3 节“内容负责人”。", "<strong>定期审核。</strong>内容按本文档第 4 节“审核与治理”中的计划审核。超过审核日期的页面会被标记。", "<strong>更新触发条件。</strong>流水线、平台或流程发生变更后，只有在相关页面更新后才算完成。每次更新都会记录在变更日志中。", "<strong>单一可信来源。</strong>项目状态、指标定义和平台支持各自只在一处定义，并从其他页面链接，因此每项变更只需修改一次。", "<strong>到期与淘汰。</strong>每项已知限制都有负责人和目标日期。过时的页面会在每季度的内容审计中淘汰或合并。", "本节使用挑战中的以下数据。", "表：各地区的配置时长和返工率。NA：一月、三月和六月分别为 12、8 和 3 天，返工率为 3%。EMEA：11、7 和 4 天，返工率为 5%。APAC：13、10 和 6 天，返工率为 9%。", "<strong>地区</strong>", "<strong>一月（天）</strong>", "<strong>三月（天）</strong>", "<strong>六月（天）</strong>", "<strong>返工率</strong>", "<strong>NA</strong>", "<strong>EMEA</strong>", "<strong>APAC</strong>", "<em>图 1：一月至六月各地区的平均配置时长。</em>", "IPAP 试点缩短了所有三个地区的配置时间。从一月到六月，北美的配置时间从 12 天降到 3 天，EMEA 从 11 天降到 4 天，APAC 从 13 天降到 6 天。配置更快意味着团队能更早获得所需的基础设施。", "不过，该项目还没有准备好进行全球推广：", "向 EMEA 和 APAC 的扩展仍在进行。", "95% 的采用率数据只适用于试点团队。", "3 天的结果只适用于北美。", "<strong>主要风险</strong>", "由于遗留依赖，APAC 约 40% 的请求仍需手动配置。APAC 的返工率也最高（9%，而北美为 3%）。", "Windows 偏差检测尚不稳定。", "安全审批和库存同步仍需手动处理。", "<strong>准备情况：</strong>IPAP 已准备好按地区分阶段推广，但还不能宣布为全球推广。", "<strong>需要管理层做出的决定</strong>", "批准每个地区的准备标准。", "批准用于消除 APAC 遗留依赖的资金。", "批准一份更正后的状态更新，以替换之前的高管更新。", "<strong>当前状态</strong>", "Jenkins 现在负责试点团队的配置，但部分步骤仍为手动：", "例外请求的安全审批", "带有遗留依赖的请求，主要在 APAC", "另有两个已知限制影响日常运营：Windows 偏差检测尚不稳定，库存同步作业仍在调优。", "<strong>地区差异</strong>", "表：六月的地区差异。NA：3 天，返工率 3%，可作为参考。EMEA：4 天，返工率 5%，扩展进行中。APAC：6 天，返工率 9%，扩展进行中，约 40% 的请求仍为手动。", "<strong>六月配置时间</strong>", "<strong>备注</strong>", "3 天", "最接近目标状态，可作为参考。", "4 天", "扩展进行中。在入职过程中记录差距。", "6 天", "扩展进行中。约 40% 的请求仍为手动。", "<strong>团队目前应做的事</strong>", "手动检查 Windows 主机的偏差。", "提交配置请求前，确认库存记录。", "对带有遗留依赖的请求使用手动工作流。", "<strong>关于采用率的考虑</strong>", "95% 的采用率数据只涵盖试点团队。在新团队入职之前，应将采用率定义为无需手动步骤即可完成的请求所占的百分比，并为每个地区建立基线。", "<strong>改进机会</strong>", "制定计划，消除或绕开 APAC 的每项遗留依赖。", "按根本原因跟踪返工。", "明确 Windows 偏差检测在什么情况下被视为稳定。", "统计有多少请求需要手动安全审批，以及它们等待了多久。", "分别报告自动请求和手动请求配置时间的中位数和 P90。", "每月的管理层仪表板显示 IPAP 是否有效、扩展是否安全，以及哪些事项需要决策。每项指标按地区显示，展示随时间变化的趋势，并列出其定义、数据来源、负责人和最近更新日期。<br/> <br/> 下图显示了一月至六月各地区的平均配置时间。三个地区的配置时间都有所下降，但只有北美达到了 3 天。<br/> <br/>", "图表的文字说明", "一月至六月各地区平均配置时长的折线图。三个地区都有改善。NA 从 12 天降到 8 天，再降到 3 天。EMEA 从 11 天降到 7 天，再降到 4 天。APAC 从 13 天降到 10 天，再降到 6 天。只有 NA 达到了 3 天。", "表：建议的仪表板指标。共八项指标，每项都列出它跟踪的内容和重要原因：推广进度、自动化率、配置时间、返工率、手动安全审批、偏差检测覆盖率、库存准确性和准备状态。", "<strong>指标</strong>", "<strong>跟踪内容</strong>", "<strong>重要原因</strong>", "推广进度", "已上线的地区和团队，与计划对比", "显示实际进度，而不是笼统的说法", "自动化率", "无需手动步骤即可完成的请求", "显示有多少团队真正在使用 IPAP", "配置时间", "以天为单位的中位数和 P90，分自动和手动请求", "显示配置速度，包括长时间延迟", "返工率", "需要修正的请求", "显示更快的配置是否影响质量", "手动安全审批", "审批数量及所需时间", "显示审批是否造成延迟", "偏差检测覆盖率", "已覆盖的主机，按 OS 统计", "显示合规方面的缺口，例如 Windows", "库存准确性", "匹配的记录，以及同步所需时间", "显示自动化是否使用正确的数据", "准备状态", "每个地区为已就绪、进行中或未就绪", "显示哪些地区可以推进", "<strong>该项目是否已准备好更大范围推广？</strong>", "是，适合分阶段推广，每次一个地区。否，不适合宣布全球推广。北美是参考地区。只有在制定好遗留依赖的处理计划后，APAC 才进入全面推广。", "<strong>事实</strong>", "来源和指标数据说明了以下内容：", "一月至六月，所有地区的配置时间都有所下降：NA 从 12 天降到 3 天，EMEA 从 11 天降到 4 天，APAC 从 13 天降到 6 天。", "95% 的采用率只适用于试点团队。", "返工率分别为：NA 3%，EMEA 5%，APAC 9%。", "部分安全审批仍为手动。", "<strong>假设</strong>", "以下陈述是我的假设，尚未证实：", "配置时间是每个地区所有请求的平均值。", "改善的主要原因是 IPAP，而不是人员配置或请求量的变化。", "APAC 约 40% 的请求仍为手动。", "APAC 较高的返工率是由手动配置或遗留依赖造成的。", "<strong>风险和尚存的问题</strong>", "<strong>可信度：</strong>之前的高管更新可能已经影响了一些决策。", "<strong>扩展：</strong>随着请求量增长，APAC 的手动工作和返工可能会增加。", "<strong>合规：</strong>Windows 主机没有稳定的偏差检测。", "<strong>数据质量：</strong>配置可能依赖过时的库存记录。", "<strong>发布前需要验证的信息</strong>", "各地区的推广状态和日期", "采用率和配置时间的衡量方式", "数据是否只涵盖试点团队", "APAC 当前的手动请求比例", "Windows 和 Linux 的支持状态", "<strong>建议</strong>", "在继续推进之前，管理层需要：", "发布一份更正后并注明日期的状态更新。", "批准采用率、配置时间和返工的标准定义。", "商定每个地区的准备标准，例如目标自动化率和最高返工率。", "为消除或绕开 APAC 遗留依赖的计划提供资金。", "明确 Windows 偏差检测在什么情况下是稳定的。", "在下一个地区上线之前，推出 IPAP 知识中心并指定负责人。", "我在本次挑战中使用了 Claude（Anthropic）。最终内容、评级和建议均由我决定。", "第 1 节：使用的提示", "分享了我自己的草稿，让它修改几个部分以保持一致。", "请它对维护策略和信息架构等具体部分提供反馈，并按我的风格重写验证问题。", "让它加入一张配置时间趋势图。", "创建一个本地网页来发布本文档。", "创建一个带下拉菜单的多语言（5 种语言）选项，让不同地区的人可以用自己选择的语言阅读本文档。", "第 2 节：采纳的输出", "使信息架构概述、目标用户、审核周期和维护策略更具体的建议。", "配置时间趋势图。", "用于以网页形式查看文档的 index.html。（我会在今天的会议上分享）", "第 3 节：拒绝或修改的输出", "拒绝了几份草稿，因为语气偏向说服而不是技术说明。", "拒绝了趋势图的彩色、格式繁复的版式。", "分析部分保留了我自己的结构，没有采用 AI 的表格格式。"]};
+const NOTES = {"en": "", "es": "Traducción del documento original en inglés. El texto dentro del gráfico está en inglés; consulte la descripción en texto y la tabla de datos. La versión de Word está en inglés.", "hi": "यह मूल अंग्रेज़ी दस्तावेज़ का अनुवाद है। चार्ट के अंदर का पाठ अंग्रेज़ी में है; पाठ विवरण और डेटा तालिका देखें। Word संस्करण अंग्रेज़ी में है।", "fr": "Traduction du document original en anglais. Le texte du graphique est en anglais ; consultez la description textuelle et le tableau de données. La version Word est en anglais.", "zh": "本页为英文原始文档的译文。图表中的文字为英文，请参阅图表的文字说明和数据表。Word 版本为英文。"};
+const HTML_LANG = {en:'en', es:'es', hi:'hi', fr:'fr', zh:'zh-Hans'};
+function applyLang(l) {
+  if (!I18N[l]) l = 'en';
+  const t = I18N[l];
+  document.querySelectorAll('[data-i18n]').forEach(el => { const v = t[+el.dataset.i18n]; if (v !== undefined) el.innerHTML = v; });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => { const v = t[+el.dataset.i18nAlt]; if (v !== undefined) el.alt = v; });
+  document.documentElement.lang = HTML_LANG[l];
+  const n = document.getElementById('langnote'); n.textContent = NOTES[l]; n.hidden = !NOTES[l];
+  document.getElementById('lang-select').value = l;
+  try { localStorage.setItem('ipap-lav-lang', l); } catch (e) {}
+  try { const u = new URL(location.href); if (l === 'en') u.searchParams.delete('lang'); else u.searchParams.set('lang', l); history.replaceState(null, '', u); } catch (e) {}
+}
+document.getElementById('lang-select').addEventListener('change', e => applyLang(e.target.value));
+(function () {
+  let l = null;
+  try { l = new URL(location.href).searchParams.get('lang'); } catch (e) {}
+  if (!l) { try { l = localStorage.getItem('ipap-lav-lang'); } catch (e) {} }
+  if (!l) { const b = (navigator.language || 'en').slice(0, 2).toLowerCase(); if (I18N[b]) l = b; }
+  if (l && l !== 'en') applyLang(l);
+})();
+</script>
+</body>
+</html>
